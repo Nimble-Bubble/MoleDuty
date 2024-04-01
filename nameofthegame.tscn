@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://r8sfya001e3w"]
+
+[ext_resource type="FontFile" uid="uid://l2g73vjp614m" path="res://NEUROPOL.ttf" id="1_m7ws4"]
+[ext_resource type="Texture2D" uid="uid://cxuowjgd1pm7d" path="res://Characters/Playable/Tester/testcharidle.png" id="2_5q2nx"]
+[ext_resource type="Script" path="res://gotomstest.gd" id="3_3gx5h"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(64, 1)
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(582, 332)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_top = 69.0
+offset_right = 1152.0
+offset_bottom = 301.0
+theme_override_fonts/normal_font = ExtResource("1_m7ws4")
+theme_override_fonts/bold_font = ExtResource("1_m7ws4")
+theme_override_font_sizes/normal_font_size = 128
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[center]Mole Duty
+[b]This screen is a work in progress
+Yes, this is the font from Astro Lounge (a.k.a Neuropol)
+[/b][/center]"
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_top = 419.0
+offset_right = 1152.0
+offset_bottom = 465.0
+bbcode_enabled = true
+text = "[center]Press Enter or Start for Campaign
+^^vv<>A or Space for Creative
+[/center]"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 527.0
+offset_top = 519.0
+offset_right = 644.0
+offset_bottom = 559.0
+action_mode = 0
+text = "MS_test1"
+icon = ExtResource("2_5q2nx")
+script = ExtResource("3_3gx5h")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]
