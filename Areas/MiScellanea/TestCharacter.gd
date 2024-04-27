@@ -17,6 +17,8 @@ func _physics_process(delta):
 	if Input.is_action_pressed("p1right"):
 		velocity.x += 25;
 	if Input.is_action_just_pressed("p1jump") and jumpsLeft > 0:
+
+		$Jumpsound.play();
 		velocity.y -= 200;
 		jumpsLeft -= 1;
 	var motion = velocity * delta

@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://db11twc5jvbc2"]
+[gd_scene load_steps=18 format=3 uid="uid://db11twc5jvbc2"]
 
 [ext_resource type="Texture2D" uid="uid://bknn40hluhv6x" path="res://Terrain/Tilesets/testtileset.png" id="1_p2i7w"]
 [ext_resource type="Texture2D" uid="uid://cxuowjgd1pm7d" path="res://Characters/Playable/Tester/testcharidle.png" id="2_6yhpg"]
 [ext_resource type="Script" path="res://Areas/MiScellanea/TestCharacter.gd" id="2_neuuq"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_u4htw"]
+[ext_resource type="AudioStream" uid="uid://buymab2nl55k4" path="res://Sounds/Player/synthyjump.wav" id="5_bopwj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5536"]
 resource_name = "Test Tileset"
@@ -328,3 +329,7 @@ shape = SubResource("RectangleShape2D_83s8r")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_a4yyl")
 animation = &"jump"
+
+[node name="Jumpsound" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
+stream = ExtResource("5_bopwj")
+volume_db = -10.0
