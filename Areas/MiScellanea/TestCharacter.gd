@@ -11,13 +11,17 @@ func _physics_process(delta):
 	
 	velocity.y += delta * grav;
 	if is_on_floor:
+		#if (velocity.y < 0):
+			#velocity.y = 0;
 		jumpsLeft = 1;
-		if !Input.is_action_just_pressed("p1jump"):
-			velocity.y = 0;
+		#if !Input.is_action_just_pressed("p1jump"):
+			#velocity.y = 0; }
 	if Input.is_action_pressed("p1left"):
 		velocity.x -= 25;
 	if Input.is_action_pressed("p1right"):
 		velocity.x += 25;
+	if (velocity.x <= -500) or (velocity.x >= 500):
+		velocity.x *= 0.95;
 	if Input.is_action_just_pressed("p1jump") and jumpsLeft > 0:
 
 		$Jumpsound.play();
