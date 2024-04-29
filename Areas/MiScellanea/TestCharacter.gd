@@ -30,7 +30,9 @@ func _physics_process(delta):
 		if velocity.x < 0:
 			velocity.x = -1000;
 		else:
-			velocity.x = 1000
+			velocity.x = 1000;
+		velocity.y = 0;
+		$Dashsound.play();
 	velocity.x *= 0.9;
 	if Input.is_action_just_pressed("p1jump") and jumpsLeft > 0:
 
