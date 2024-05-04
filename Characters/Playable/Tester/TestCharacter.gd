@@ -22,6 +22,12 @@ func _physics_process(delta):
 		jumpsLeft = 1;
 		#if !Input.is_action_just_pressed("p1jump"):
 			#velocity.y = 0; }
+	if Input.is_action_just_pressed("toggledash"):
+		$ToggleDash.play();
+		if canDash == 1:
+			canDash = 0;
+		else:
+			canDash = 1;
 	if Input.is_action_pressed("p1left"):
 		velocity.x -= 25;
 	if Input.is_action_pressed("p1right"):
@@ -33,15 +39,16 @@ func _physics_process(delta):
 			velocity.x = -1000;
 		else:
 			velocity.x = 1000;
-		velocity.y = 0;
 		$Dashsound.play();
+		if velocity.y > 0:
+			velocity.y = 0;
 	velocity.x *= 0.9;
 	if Input.is_action_just_pressed("p1jump") and jumpsLeft > 0:
 
 		$Jumpsound.play();
-		if (velocity.y > 0):
+		if (velocity.y > 0 and !Input.is_action_pressed("p1down")):
 			velocity.y = 0;
-		velocity.y -= 300;
+		velocity.y -= 350;
 		jumpsLeft -= 1;
 	var _motion = velocity * delta
 	#motion = move_and_collide(motion)
