@@ -55,6 +55,9 @@ func _physics_process(delta):
 	move_and_slide();
 	frame_selector();
 func frame_selector():
+	if Input.is_action_just_pressed("p1dash"):
+		$AnimatedSprite2D.animation = "dash"
+		$AnimatedSprite2D.flip_v = false
 	if velocity.y != 0:
 		$AnimatedSprite2D.animation = "jump"
 		$AnimatedSprite2D.flip_v = false
@@ -64,3 +67,4 @@ func frame_selector():
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 	else:
 		$AnimatedSprite2D.animation = "idle"
+		$AnimatedSprite2D.flip_v = false

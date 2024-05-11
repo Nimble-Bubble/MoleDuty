@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d2ld0c10ukpg1"]
+[gd_scene load_steps=18 format=3 uid="uid://d2ld0c10ukpg1"]
 
 [ext_resource type="Script" path="res://Characters/Playable/Tester/TestCharacter.gd" id="1_xqn73"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_6tm8e"]
@@ -9,6 +9,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_83s8r"]
 size = Vector2(14, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2ql7"]
+atlas = ExtResource("2_6tm8e")
+region = Rect2(100, 0, 20, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pq6rp"]
 atlas = ExtResource("2_6tm8e")
@@ -44,7 +48,10 @@ region = Rect2(20, 0, 20, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a4yyl"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2ql7")
+}],
 "loop": true,
 "name": &"dash",
 "speed": 5.0
@@ -110,7 +117,7 @@ shape = SubResource("RectangleShape2D_83s8r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_a4yyl")
-animation = &"jump"
+animation = &"dash"
 
 [node name="Jumpsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_rduk6")
