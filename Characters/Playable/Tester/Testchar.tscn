@@ -117,7 +117,7 @@ shape = SubResource("RectangleShape2D_83s8r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_a4yyl")
-animation = &"dash"
+animation = &"idle"
 
 [node name="Jumpsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_rduk6")
@@ -129,3 +129,5 @@ volume_db = -10.0
 
 [node name="ToggleDash" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_gkx1g")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
