@@ -68,3 +68,4 @@ func frame_selector():
 	else:
 		$AnimatedSprite2D.animation = "idle"
 		$AnimatedSprite2D.flip_v = false
+func retired():
