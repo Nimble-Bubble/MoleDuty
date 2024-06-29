@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
 @onready var rid = get_rid()
-@export var defaultSpeed = 2.5;
+@export var defaultSpeed = 25;
 @export var defaultAcceleration = 10;
 @export var jumpsLeft = 1;
+@export var dashTimer = 60;
 var canDash;
 
 func _init():
@@ -11,7 +12,7 @@ func _init():
 	canDash = 0;
 func _physics_process(delta):
 	var _vel = Vector2()
-	var grav = 490
+	var grav = 981
 	slide_on_ceiling = false;
 	floor_stop_on_slope = false;
 	#if !is_on_floor:
@@ -29,9 +30,9 @@ func _physics_process(delta):
 		else:
 			canDash = 1;
 	if Input.is_action_pressed("p1left"):
-		velocity.x -= 25;
+		velocity.x -= defaultSpeed;
 	if Input.is_action_pressed("p1right"):
-		velocity.x += 25;
+		velocity.x += defaultSpeed;
 	if (velocity.x <= -500) or (velocity.x >= 500):
 		velocity.x *= 0.95;
 	if Input.is_action_just_pressed("p1dash") and canDash >= 1:
@@ -48,7 +49,7 @@ func _physics_process(delta):
 		$Jumpsound.play();
 		if (velocity.y > 0 and !Input.is_action_pressed("p1down")):
 			velocity.y = 0;
-		velocity.y -= 350;
+		velocity.y -= 500;
 		jumpsLeft -= 1;
 	var _motion = velocity * delta
 	#motion = move_and_collide(motion)

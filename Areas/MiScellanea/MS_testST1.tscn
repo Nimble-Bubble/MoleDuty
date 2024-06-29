@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dj48vfkfg77wm"]
+[gd_scene load_steps=9 format=3 uid="uid://dj48vfkfg77wm"]
 
 [ext_resource type="TileSet" uid="uid://calqj86yweol4" path="res://Terrain/Tilesets/testtileset.tres" id="1_7s7hl"]
 [ext_resource type="Texture2D" uid="uid://d3rnluxudm57l" path="res://Terrain/Tilesets/SeaTowerTileset.png" id="2_1i7k1"]
 [ext_resource type="PackedScene" uid="uid://d2ld0c10ukpg1" path="res://Characters/Playable/Tester/Testchar.tscn" id="2_drpe8"]
 [ext_resource type="Texture2D" uid="uid://bcnbhw2dacxmv" path="res://Graphics/SeaTowerPlaceholderBG.png" id="4_22mrm"]
 [ext_resource type="Texture2D" uid="uid://f08ka28kweub" path="res://Graphics/SeaTowerPlaceholderButton.png" id="5_rm1uy"]
-[ext_resource type="FontFile" uid="uid://l2g73vjp614m" path="res://Assets/Fonts/NEUROPOL.ttf" id="6_rl5y7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfnoy"]
 texture = ExtResource("2_1i7k1")
@@ -441,42 +440,40 @@ position = Vector2(-331, 249)
 scale = Vector2(5.86905, 5.86905)
 texture = ExtResource("5_rm1uy")
 
-[node name="WCtoMainHallLabel2" type="RichTextLabel" parent="."]
+[node name="WCtoMainHallLabel2" type="Label" parent="."]
 offset_left = 1168.0
 offset_top = 336.0
 offset_right = 1664.0
 offset_bottom = 676.0
-theme_override_fonts/normal_font = ExtResource("6_rl5y7")
 text = "This \"hall\" of sorts connects the main tower area to Water Control through the three-platform room.
 
 Water Control is themed around the states of water, with steam in the upper half and ice in the lower half."
+autowrap_mode = 3
 
-[node name="WCtoMainHallLabel" type="RichTextLabel" parent="."]
+[node name="WCtoMainHallLabel" type="Label" parent="."]
 offset_left = -32.0
 offset_top = 336.0
 offset_right = 464.0
 offset_bottom = 676.0
-theme_override_fonts/normal_font = ExtResource("6_rl5y7")
 text = "This is where the initial spawn point for this scene was set. I moved that \"first room I came up with\" from here to where it is now.
 
 You can get a peek of the background through the holes in the wall. As of writing, it's a placeholder that doesn't really fit into the game's style, but it should look better eventually."
+autowrap_mode = 3
 
-[node name="ARSecretLabel" type="RichTextLabel" parent="."]
+[node name="ARSecretLabel" type="Label" parent="."]
 offset_left = 576.0
 offset_top = 304.0
 offset_right = 1088.0
 offset_bottom = 576.0
-theme_override_fonts/normal_font = ExtResource("6_rl5y7")
-theme_override_font_sizes/normal_font_size = 0
-bbcode_enabled = true
 text = "This is one of the first rooms I came up with.
 Given that this just seems to be an unassuming room at first, you might wonder what its purpose is. If you do both paths of the Water Control tower and head back here, you will find that it is an arena for Ambition and Resolution, a pair that functions as a secret boss fight. Beating these two will open up the top of the room, giving way to a secret route on the outside of the towers.
 
 Also, this is currently not to scale."
+autowrap_mode = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="Label" parent="."]
 offset_left = -928.0
 offset_right = -608.0
 offset_bottom = 512.0
-theme_override_fonts/normal_font = ExtResource("6_rl5y7")
 text = "This room serves as a sort of \"choose your own path\" room. Flip the switch through an attack, slam, dash, or jump to choose your path. The paths are designed around water-based gimmicks: The upper path involves steam and fans, whereas the lower path involves ice, snow, and slippery surfaces. Though you can get to the important destination required for progression through either path, you can also choose to go through both paths."
+autowrap_mode = 3
