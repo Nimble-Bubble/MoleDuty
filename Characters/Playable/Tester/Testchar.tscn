@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d2ld0c10ukpg1"]
+[gd_scene load_steps=23 format=3 uid="uid://d2ld0c10ukpg1"]
 
 [ext_resource type="Script" path="res://Characters/Playable/Tester/TestCharacter.gd" id="1_xqn73"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_6tm8e"]
@@ -6,6 +6,11 @@
 [ext_resource type="AudioStream" uid="uid://buymab2nl55k4" path="res://Sounds/Player/synthyjump.wav" id="4_rduk6"]
 [ext_resource type="AudioStream" uid="uid://c6dwe7rsivu0w" path="res://Sounds/Player/synthydash.wav" id="5_34756"]
 [ext_resource type="AudioStream" uid="uid://dqv6kjk2oo4k2" path="res://Sounds/Player/toggledash.mp3" id="6_gkx1g"]
+[ext_resource type="AudioStream" uid="uid://dwctqkdqkte01" path="res://Sounds/Player/dashunlock.wav" id="7_2x5oy"]
+[ext_resource type="AudioStream" uid="uid://bo7cu51mg0fxk" path="res://Sounds/Player/wallclimbunlock.wav" id="8_h1yrl"]
+[ext_resource type="AudioStream" uid="uid://v5qdxia7awch" path="res://Sounds/Player/slideunlock.wav" id="9_t1rw5"]
+[ext_resource type="AudioStream" uid="uid://dvd0vj2v2enya" path="res://Sounds/Player/slamunlock.wav" id="10_ottff"]
+[ext_resource type="AudioStream" uid="uid://dqp8uuw56gq2k" path="res://Sounds/Player/airjumpunlock.wav" id="11_li7kv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_83s8r"]
 size = Vector2(14, 30)
@@ -105,7 +110,10 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-up_direction = Vector2(0, 1)
+collision_layer = 3
+floor_max_angle = 1.0472
+floor_snap_length = 0.1
+platform_floor_layers = 4294901763
 platform_wall_layers = 3
 script = ExtResource("1_xqn73")
 
@@ -131,3 +139,18 @@ volume_db = -10.0
 stream = ExtResource("6_gkx1g")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+
+[node name="DashUnlock" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_2x5oy")
+
+[node name="WallClimbUnlock" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_h1yrl")
+
+[node name="SlideUnlock" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_t1rw5")
+
+[node name="SlamUnlock" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_ottff")
+
+[node name="AirJumpUnlock" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_li7kv")
