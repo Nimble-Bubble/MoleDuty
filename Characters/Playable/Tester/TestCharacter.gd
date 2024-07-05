@@ -66,12 +66,16 @@ func _physics_process(delta):
 			velocity.y = 0;
 	velocity.x *= 0.9;
 	if Input.is_action_just_pressed("p1jump") and jumpsLeft > 0:
+		if is_on_floor or is_on_wall:
+			$Jumpsound.play();
+		if !is_on_floor and !is_on_wall:
+			$Airjumpsound.play();
 		if is_on_wall() and canClimb == 1:
 			if velocity.x < 0:
 				velocity.x -= 400;
 			else:
 				velocity.x += 400;
-		$Jumpsound.play();
+		
 		if (velocity.y > 0 and !Input.is_action_pressed("p1down")):
 			velocity.y = 0;
 		velocity.y = -500;
