@@ -50,6 +50,9 @@ func _physics_process(delta):
 			canAirJump = 0;
 		else:
 			canAirJump = 1;
+	if Input.is_action_just_pressed("reload"):
+		get_tree().reload_current_scene();
+		$Painsound.play;
 	if Input.is_action_pressed("p1left"):
 		velocity.x -= defaultSpeed;
 	if Input.is_action_pressed("p1right"):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d2ld0c10ukpg1"]
+[gd_scene load_steps=25 format=3 uid="uid://d2ld0c10ukpg1"]
 
 [ext_resource type="Script" path="res://Characters/Playable/Tester/TestCharacter.gd" id="1_xqn73"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_6tm8e"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://dvd0vj2v2enya" path="res://Sounds/Player/slamunlock.wav" id="10_ottff"]
 [ext_resource type="AudioStream" uid="uid://dqp8uuw56gq2k" path="res://Sounds/Player/airjumpunlock.wav" id="11_li7kv"]
 [ext_resource type="AudioStream" uid="uid://c4lux45q67ra2" path="res://Sounds/Player/synthyairjump.wav" id="12_b15ef"]
+[ext_resource type="AudioStream" uid="uid://coaueuf8qpd67" path="res://Sounds/Player/synthypain.wav" id="13_vf0cd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_83s8r"]
 size = Vector2(14, 30)
@@ -131,10 +132,12 @@ animation = &"idle"
 [node name="Jumpsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_rduk6")
 volume_db = -10.0
+max_polyphony = 5
 
 [node name="Dashsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_34756")
 volume_db = -10.0
+max_polyphony = 5
 
 [node name="ToggleDash" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_gkx1g")
@@ -161,6 +164,10 @@ volume_db = -10.0
 stream = ExtResource("11_li7kv")
 volume_db = -10.0
 
-[node name="Airjumpsound" type="AudioStreamPlayer" parent="."]
+[node name="Airjumpsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_b15ef")
+volume_db = -10.0
+
+[node name="Painsound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_vf0cd")
 volume_db = -10.0
