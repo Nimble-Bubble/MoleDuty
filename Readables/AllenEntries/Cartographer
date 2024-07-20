@@ -1,0 +1,71 @@
+Caught up in the nature of the Brill Comb, there lied a strange figure with tools spread around.
+
+"Oh... Hello, hello, hello."
+"You've caught me in a rather unusual position."
+"The majority of my time is spent not being stuck in such situations, for I would consider myself more of an 'outgoing individual'."
+
+1. What do you do with all that time?
+"I go outside. Have I not already stated that?"
+"My explorations often grant me with knowledge that makes itself clear in my profession."
+
+1A. What is your profession?
+"Cartography, the art and science of mapping regions."
+
+1B. What is this knowledge?
+"Though it may not seem like it from overhead, this island's regions sprawl with distinct 'rooms'."
+"When reading my maps, you may learn of the layout of these regions and their 'rooms'."
+
+2. How can I help you?
+"This entanglement is a more complex issue than it initially seems."
+"What seems like a simple target for attacks could require a more complicated solution, so be observant in your exploration."
+
+3. Why did you say "hello" three times?
+"To make up for the time I've spent alone."
+
+This Cartographer can be freed from the "natural" predicament through a mechanism found above his initial spot.
+
+"I feel the need to collect myself...and with it, my work."
+"For now, you can take this map of the surrounding area. Consider it a sampler of sorts."
+For this, you are given the Basic Brill Comb Map.
+1. Where could your other work be found?
+"Across the island, of course."
+"I once thought to spread my work across the island, both to fund further work and to keep the knowledge moving about."
+"I work for the public, or what remains of it; in that manner, I would consider myself a demi-worker."
+2. Let's work to find it together.
+"And this investigative work could benefit us both: You obtain beneficial knowledge, and I get my work back."
+3. Take all the time you need! I'll probably be here for a while.
+"Thank you."
+
+The next encounter with the Cartographer involves finding one of their makeshift shops. 
+
+Brill Comb:
+"Welcome! It's nice to see you again."
+
+1. Is this a shop of yours?
+"Indeed! It was a rather quick construction motivated by recent events."
+"In truth, this region has been rather quiet with life."
+2. What do you have in stock?
+"Try my improved map; it offers a more detailed view of the area."
+Options include the following:
+Improved Brill Comb Map
+Essential Memory of Swordsmanship
+Essential Memory of Archery
+Potion of Gradual Healing
+Woodland Grub
+3. What can I do in the area?
+If the Trial of the Forest has not yet been completed:
+"In trying to leave this area, I have found strange blockades."
+"When I tried to climb these blockades as I normally would, they seemed to extend such that I could never truly get over them."
+"Perhaps there is a reason for these blockades."
+"I have marked the potential source on your map."
+If the Trial has been completed:
+"To the west, there lies a vast desert known as the Turbulent Whisper."
+"As far as I am aware, this desert held and likely still holds a colony of Scavant toures."
+"They may help you in your journey."
+"To the east, there lies the Desolate Highlands."
+"That place is much more problematic due to its high level of dangerous activity in recent times."
+"But, rest assured, the amount of dangerous activity ensures some kind of civilization."
+
+* The cartographer, or "map-maker" as he is often called, is an odd figure.
+* His job is cartography, which he carries out with passion. In various areas, he can be found selling maps.
+* Given his knowledge on the Huinem and his status as a relic of the past, it's possible that he is a Huinem himself.
