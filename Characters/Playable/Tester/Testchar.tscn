@@ -144,23 +144,23 @@ stream = ExtResource("6_gkx1g")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 
-[node name="DashUnlock" type="AudioStreamPlayer" parent="."]
+[node name="DashUnlock" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_2x5oy")
 volume_db = -10.0
 
-[node name="WallClimbUnlock" type="AudioStreamPlayer" parent="."]
+[node name="WallClimbUnlock" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_h1yrl")
 volume_db = -10.0
 
-[node name="SlideUnlock" type="AudioStreamPlayer" parent="."]
+[node name="SlideUnlock" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_t1rw5")
 volume_db = -10.0
 
-[node name="SlamUnlock" type="AudioStreamPlayer" parent="."]
+[node name="SlamUnlock" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_ottff")
 volume_db = -10.0
 
-[node name="AirJumpUnlock" type="AudioStreamPlayer" parent="."]
+[node name="AirJumpUnlock" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_li7kv")
 volume_db = -10.0
 
