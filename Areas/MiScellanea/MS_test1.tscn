@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://db11twc5jvbc2"]
+[gd_scene load_steps=11 format=3 uid="uid://db11twc5jvbc2"]
 
 [ext_resource type="Texture2D" uid="uid://bknn40hluhv6x" path="res://Terrain/Tilesets/testtileset.png" id="1_p2i7w"]
 [ext_resource type="PackedScene" uid="uid://d2ld0c10ukpg1" path="res://Characters/Playable/Tester/Testchar.tscn" id="2_4boo7"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://duu34d67eysel" path="res://Graphics/TurbulentWhisperWarpButton.png" id="5_guwns"]
 [ext_resource type="FontFile" uid="uid://l2g73vjp614m" path="res://Assets/Fonts/NEUROPOL.ttf" id="5_qgl6l"]
 [ext_resource type="Script" path="res://Areas/MiScellanea/gotomstesttw.gd" id="6_mvgqq"]
+[ext_resource type="AudioStream" uid="uid://bjn82y2pp71fa" path="res://Sounds/Environment/synthyteleport.wav" id="8_2ake3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5536"]
 resource_name = "Test Tileset"
@@ -142,6 +143,9 @@ script = ExtResource("4_085jc")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="Button"]
 position = Vector2(55, -187)
+
+[node name="SynthyTeleport" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("8_2ake3")
 
 [node name="Button2" type="Button" parent="."]
 offset_left = -965.0
