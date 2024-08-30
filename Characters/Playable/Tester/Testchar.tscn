@@ -126,6 +126,8 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_83s8r")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+light_mask = 2
+visibility_layer = 3
 sprite_frames = SubResource("SpriteFrames_a4yyl")
 animation = &"idle"
 
@@ -143,6 +145,15 @@ max_polyphony = 5
 stream = ExtResource("6_gkx1g")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+show_behind_parent = true
+light_mask = 3
+visibility_layer = 3
+z_index = -1
+energy = 1.53
+range_layer_max = 5
+shadow_enabled = true
+shadow_item_cull_mask = 3
+texture = ExtResource("3_eajhb")
 
 [node name="DashUnlock" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_2x5oy")
