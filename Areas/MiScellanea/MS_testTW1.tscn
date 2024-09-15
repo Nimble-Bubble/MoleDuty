@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://ttpqhjsin6uu"]
+[gd_scene load_steps=6 format=4 uid="uid://ttpqhjsin6uu"]
 
 [ext_resource type="Texture2D" uid="uid://bknn40hluhv6x" path="res://Terrain/Tilesets/testtileset.png" id="1_db21s"]
 [ext_resource type="PackedScene" uid="uid://d2ld0c10ukpg1" path="res://Characters/Playable/Tester/Testchar.tscn" id="2_hk28a"]
+[ext_resource type="AudioStream" uid="uid://b11kbm1hrlrh5" path="res://Music/TurbulentV1.mp3" id="3_lorr5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o5536"]
 resource_name = "Test Tileset"
@@ -173,3 +174,17 @@ text = "This marks one end of the cave.
 To the left is the Turbulent Tower,
 a clock tower central to the projects of the Huinem.
 This is not the last you'll see of the caves, though."
+
+[node name="Label" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 952.0
+offset_right = 599.0
+offset_bottom = 1001.0
+text = "If you're hearing music right now, it's a work in progress.
+If you're not hearing music right now, it's also a work in progress."
+
+[node name="BGTurbulent" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lorr5")
+volume_db = -5.176
+autoplay = true
+parameters/looping = true
