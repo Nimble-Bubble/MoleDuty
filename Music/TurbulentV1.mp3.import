@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/TurbulentV1.mp3-4fae5dfdab505d166970bb4ddd12a
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
-bpm=0
+bpm=120
 beat_count=0
 bar_beats=4
