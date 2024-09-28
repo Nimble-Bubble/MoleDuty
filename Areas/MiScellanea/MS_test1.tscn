@@ -171,5 +171,21 @@ theme_override_fonts/normal_font = ExtResource("5_qgl6l")
 theme_override_font_sizes/normal_font_size = 24
 text = "Welcome to the testing areas!"
 
+[node name="Label" type="Label" parent="."]
+offset_left = -172.0
+offset_top = -107.0
+offset_right = 172.0
+offset_bottom = -84.0
+text = "Press the arrow keys to move and Z to jump.
+"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -213.0
+offset_top = 742.0
+offset_right = 214.0
+offset_bottom = 791.0
+text = "If you find yourself in trouble and death isn't an option,
+press Ctrl and R at the same time to reload the scene."
+
 [connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_button_pressed"]
