@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var defaultAcceleration = 10;
 @export var jumpsLeft = 1;
 @export var bonusJumps = 0;
-@export var dashTimer = 60;
+@export var dashTimer = 200;
 var canDash;
 var canClimb;
 var canSlide;
@@ -19,6 +19,9 @@ func _physics_process(delta):
 	var _vel = Vector2()
 	var grav = 981
 	slide_on_ceiling = false;
+	$VelXLabel.text = str(velocity.x);
+	$VelYLabel.text = str(velocity.y);
+	$DashLabel.text = str(dashTimer);
 	#floor_stop_on_slope = false;
 	if Input.is_action_just_pressed("toggledash"):
 		$DashUnlock.play();
@@ -52,21 +55,40 @@ func _physics_process(delta):
 			canAirJump = 1;
 	if Input.is_action_just_pressed("reload"):
 		get_tree().reload_current_scene();
-		$Painsound.play;
+		#$Painsound.play;
+	if Input.is_action_just_pressed("debugvelocity"):
+		$VelDebug.visible = true;
+		$VelXLabel.visible = true;
+		$VelYLabel.visible = true;
+		$DashLabel.visible = true;
 	if Input.is_action_pressed("p1left"):
 		velocity.x -= defaultSpeed;
 	if Input.is_action_pressed("p1right"):
 		velocity.x += defaultSpeed;
 	if (velocity.x <= -500) or (velocity.x >= 500):
 		velocity.x /= 1.01;
-	if Input.is_action_just_pressed("p1dash") and canDash >= 1:
-		if velocity.x < 0:
-			velocity.x = -1000;
-		else:
-			velocity.x = 1000;
-		$Dashsound.play();
-		if velocity.y > 0:
+	if canDash >= 1:
+		if dashTimer > 0:
+			dashTimer -= 1;
+		#if dashTimer <= 50 and dashTimer > 0:
+			#$DashOKIndicator.hidden = false;
+		#if dashTimer == 0:
+			#$DashOKIndicator.hidden = true;
+		if dashTimer == 50:
+			$Airjumpsound.play;
+		if dashTimer > 120:
 			velocity.y = 0;
+		if Input.is_action_just_pressed("p1dash"):
+			if dashTimer < 50:
+				if velocity.x < 0:
+					velocity.x = -1000;
+				else:
+					velocity.x = 1000;
+				$Dashsound.play();
+				dashTimer += 150;
+				#if velocity.y > 0:
+			else:
+				$Painsound.play();
 	velocity.x *= 0.9;
 	if Input.is_action_just_pressed("p1jump") and jumpsLeft > 0:
 		if is_on_floor or is_on_wall:

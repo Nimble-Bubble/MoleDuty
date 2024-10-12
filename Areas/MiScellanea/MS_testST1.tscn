@@ -184,13 +184,13 @@ tile_set = SubResource("TileSet_l8kov")
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_drpe8")]
 position = Vector2(816, 257)
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
 show_behind_parent = true
 z_index = -1000
 texture = ExtResource("4_22mrm")
 offset = Vector2(0, -48)
 
-[node name="ColorRect" type="ColorRect" parent="CharacterBody2D/Sprite2D"]
+[node name="ColorRect" type="ColorRect" parent="CharacterBody2D/Sprite2D2"]
 show_behind_parent = true
 anchors_preset = -1
 anchor_right = 1.0

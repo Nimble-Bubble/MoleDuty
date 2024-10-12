@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d2ld0c10ukpg1"]
+[gd_scene load_steps=26 format=3 uid="uid://d2ld0c10ukpg1"]
 
 [ext_resource type="Script" path="res://Characters/Playable/Tester/TestCharacter.gd" id="1_xqn73"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_6tm8e"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://dqp8uuw56gq2k" path="res://Sounds/Player/airjumpunlock.wav" id="11_li7kv"]
 [ext_resource type="AudioStream" uid="uid://c4lux45q67ra2" path="res://Sounds/Player/synthyairjump.wav" id="12_b15ef"]
 [ext_resource type="AudioStream" uid="uid://coaueuf8qpd67" path="res://Sounds/Player/synthypain.wav" id="13_vf0cd"]
+[ext_resource type="Texture2D" uid="uid://pf4e2xrk2qtg" path="res://Characters/Effects/DashOKIndicator.png" id="14_1aanb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_83s8r"]
 size = Vector2(14, 30)
@@ -182,3 +183,34 @@ volume_db = -10.0
 [node name="Painsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_vf0cd")
 volume_db = -10.0
+
+[node name="DashOKIndicator" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("14_1aanb")
+
+[node name="VelDebug" type="Label" parent="."]
+visible = false
+offset_left = -44.0
+offset_top = -123.0
+offset_bottom = -48.0
+text = "VelX: 
+VelY:
+Dash:"
+
+[node name="VelXLabel" type="Label" parent="."]
+visible = false
+offset_top = -123.0
+offset_right = 40.0
+offset_bottom = -100.0
+
+[node name="VelYLabel" type="Label" parent="."]
+visible = false
+offset_top = -92.0
+offset_right = 40.0
+offset_bottom = -69.0
+
+[node name="DashLabel" type="Label" parent="."]
+visible = false
+offset_top = -69.0
+offset_right = 40.0
+offset_bottom = -46.0
