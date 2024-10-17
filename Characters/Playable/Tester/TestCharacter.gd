@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var rid = get_rid()
-@export var defaultSpeed = 25;
+@export var defaultSpeed = 40 * (10 / 9);
 @export var defaultAcceleration = 10;
 @export var jumpsLeft = 1;
 @export var bonusJumps = 0;
@@ -18,11 +18,16 @@ func _init():
 func _physics_process(delta):
 	var _vel = Vector2()
 	var grav = 981
+	$VelXLabel.text = str(velocity.x)
+	$VelYLabel.text = str(velocity.y)
 	slide_on_ceiling = false;
 	$VelXLabel.text = str(velocity.x);
 	$VelYLabel.text = str(velocity.y);
 	$DashLabel.text = str(dashTimer);
 	#floor_stop_on_slope = false;
+	if Input.is_action_just_pressed("togglevelocitylabel"):
+		$VelXLabel.visible = true;
+		$VelYLabel.visible = true;
 	if Input.is_action_just_pressed("toggledash"):
 		$DashUnlock.play();
 		if canDash == 1:
@@ -56,11 +61,11 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("reload"):
 		get_tree().reload_current_scene();
 		#$Painsound.play;
-	if Input.is_action_just_pressed("debugvelocity"):
-		$VelDebug.visible = true;
-		$VelXLabel.visible = true;
-		$VelYLabel.visible = true;
-		$DashLabel.visible = true;
+	#if Input.is_action_just_pressed("debugvelocity"):
+		#$VelDebug.visible = true;
+		#$VelXLabel.visible = true;
+		#$VelYLabel.visible = true;
+		#$DashLabel.visible = true;
 	if Input.is_action_pressed("p1left"):
 		velocity.x -= defaultSpeed;
 	if Input.is_action_pressed("p1right"):
@@ -89,7 +94,25 @@ func _physics_process(delta):
 				#if velocity.y > 0:
 			else:
 				$Painsound.play();
-	velocity.x *= 0.9;
+	#velocity.x *= 0.9;
+		if is_on_floor():
+			velocity.x /= 1.01;
+		else:
+			velocity.x /= 1.005;
+	if Input.is_action_just_pressed("p1dash") and canDash >= 1:
+		if velocity.x < 0:
+			velocity.x = -1000;
+		else:
+			velocity.x = 1000;
+		$Dashsound.play();
+		if velocity.y > 0:
+			velocity.y = 0;
+	
+	if is_on_floor():
+		velocity.x *= 0.9;
+	if !is_on_floor():
+		velocity.x *= 0.95;
+	
 	if Input.is_action_just_pressed("p1jump") and jumpsLeft > 0:
 		if is_on_floor or is_on_wall:
 			$Jumpsound.play();

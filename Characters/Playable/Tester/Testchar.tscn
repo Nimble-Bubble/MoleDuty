@@ -197,20 +197,24 @@ text = "VelX:
 VelY:
 Dash:"
 
-[node name="VelXLabel" type="Label" parent="."]
-visible = false
-offset_top = -123.0
-offset_right = 40.0
-offset_bottom = -100.0
-
-[node name="VelYLabel" type="Label" parent="."]
-visible = false
-offset_top = -92.0
-offset_right = 40.0
-offset_bottom = -69.0
-
 [node name="DashLabel" type="Label" parent="."]
 visible = false
 offset_top = -69.0
 offset_right = 40.0
 offset_bottom = -46.0
+
+[node name="VelXLabel" type="Label" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+offset_bottom = -17.0
+horizontal_alignment = 1
+
+[node name="VelYLabel" type="Label" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -52.0
+offset_right = 20.0
+offset_bottom = -29.0
+horizontal_alignment = 1
