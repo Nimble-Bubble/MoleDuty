@@ -188,7 +188,8 @@ offset_top = 406.0
 offset_right = -446.0
 offset_bottom = 455.0
 text = "Turbulent Whisper is meant to be accessible after beating the first boss.
-As such, most of where you need to go within TW is built without unlockable abilities in mind."
+As such, most of where you need to go within TW is built without unlockable abilities in mind.
+Notable areas include the underground ruins, the Turbulent Tower, and the Calm Palm."
 
 [node name="Label4" type="Label" parent="."]
 offset_left = -334.0
@@ -222,7 +223,8 @@ offset_left = -191.0
 offset_top = 734.0
 offset_right = 728.0
 offset_bottom = 757.0
-text = "Though small parts of the Lush-Life Grotto are available early on, you're really meant to go there after getting the slide."
+text = "Though small parts of the Lush-Life Grotto are available early on, you're really meant to go there after getting the dash.
+The slide opens up a lot of the area too."
 
 [node name="Label8" type="Label" parent="."]
 offset_left = 6427.0
@@ -248,6 +250,43 @@ When you beat Hoggard, you get the Wall Jump/Sharper Claws ability.
 This opens up a lot of Chelonisla.
 If you beat the proto-Hoggard here, you can get the ability from a dropped item.
 You can also press Ctrl+2 to get the ability at some other time."
+
+[node name="Label10" type="Label" parent="."]
+offset_left = -1655.0
+offset_top = 279.0
+offset_right = -1038.0
+offset_bottom = 354.0
+text = "At the end of Turbulent Tower, you unlock the Winds of Turbulence.
+This is a dash ability that briefly halts downward velocity.
+If you dash and then jump, you might be able to make a bigger jump than usual.
+You can also press Ctrl+1 to cheat the dash ability in."
+
+[node name="Label11" type="Label" parent="."]
+offset_left = -981.937
+offset_top = -1341.59
+offset_right = -941.937
+offset_bottom = -1318.59
+text = "The Astro-Blemish is (or was?) a beach marred by several objects that fell from the sky.
+A few centuries before Allen's time, it was a bit of an early tourist trap,
+with its history bringing in quite a few attractions and visitors.
+However, due to an incident during the Great Toure War, the beach now has a ruined dock/pier
+and lots of strangely industrial bits and pieces around.
+See the Sea Tower label for needed abilities."
+
+[node name="Label12" type="Label" parent="."]
+offset_left = -1072.71
+offset_top = -1067.34
+offset_right = -1032.71
+offset_bottom = -1044.34
+text = "The Nothingsound is a massive wall built to keep the northern regions safe and under control.
+Over time, it has become a haunted relic, with decayed structures lying within the wall.
+Potentially functional rail systems line the wall, with platforms and balconies conveniently jutting out.
+If you witness a more lively Nothingsound, it may be just an illusion.
+If you witness the Eye, there is something you should probably do. 
+You may know what to do when the time comes.
+
+The northern district is all fog from here.
+All fog but one light."
 
 [connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_button_pressed"]

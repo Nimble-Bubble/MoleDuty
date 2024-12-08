@@ -86,7 +86,7 @@ func _physics_process(delta):
 			#$DashOKIndicator.hidden = true;
 		if dashTimer == 50:
 			$Airjumpsound.play;
-		if dashTimer > 135:
+		if dashTimer > 135 and velocity.y > 0:
 			velocity.y = 0;
 		if Input.is_action_just_pressed("p1dash"):
 			if dashTimer < 50:
