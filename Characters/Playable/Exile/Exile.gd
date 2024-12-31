@@ -18,6 +18,7 @@ func _init():
 func _physics_process(delta):
 	var _vel = Vector2()
 	var grav = 981
+	var direction = Input.get_axis("p1left", "p1right")
 	$VelXLabel.text = str(velocity.x)
 	$VelYLabel.text = str(velocity.y)
 	slide_on_ceiling = false;
@@ -124,10 +125,10 @@ func _physics_process(delta):
 		if !is_on_floor and !is_on_wall:
 			$Airjumpsound.play();
 		if is_on_wall() and canClimb == 1:
-			if velocity.x < 0:
-				velocity.x -= 300;
-			else:
+			if $AnimatedSprite2D.flip_h == true:
 				velocity.x += 300;
+			else:
+				velocity.x -= 300;
 		
 		if (velocity.y > 0 and !Input.is_action_pressed("p1down")):
 			velocity.y = 0;
@@ -146,7 +147,7 @@ func _physics_process(delta):
 			jumpsLeft = 1 + bonusJumps;
 	if is_on_wall() and canClimb == 1:
 		if Input.is_action_pressed("p1left") or Input.is_action_pressed("p1right"):
-			velocity.y /= 0.9;
+			velocity.y *= 0.95;
 		if canAirJump == 1:
 			jumpsLeft = 2 + bonusJumps;
 		else:
@@ -157,17 +158,18 @@ func frame_selector():
 	if Input.is_action_just_pressed("p1dash"):
 		$AnimatedSprite2D.animation = "dash"
 		$AnimatedSprite2D.flip_v = false
-	if velocity.y != 0:
+	if velocity.y == 0:
+		if velocity.x != 0 and Input.is_action_pressed("p1right") or velocity.x != 0 and Input.is_action_pressed("p1left"):
+			$AnimatedSprite2D.animation = "walk"
+			$AnimatedSprite2D.flip_v = false
+			#$AnimatedSprite2D.flip_h = velocity.x < 0
+	if Input.is_action_pressed("p1left"):
+		$AnimatedSprite2D.flip_h = true;
+	if Input.is_action_pressed("p1right"):
+		$AnimatedSprite2D.flip_h = false;
+	if velocity.y < 0 and !is_on_wall():
 		$AnimatedSprite2D.animation = "jump"
 		$AnimatedSprite2D.flip_v = false
-	if velocity.x != 0 and Input.is_action_pressed("p1right") or velocity.x != 0 and Input.is_action_pressed("p1left"):
-		$AnimatedSprite2D.animation = "walk"
-		$AnimatedSprite2D.flip_v = false
-		#$AnimatedSprite2D.flip_h = velocity.x < 0
-	if Input.is_action_pressed("p1left"):
-		AnimatedSprite2D.flip_h = 1;
-	if Input.is_action_pressed("p1right"):
-		AnimatedSprite2D.flip_h = 0;
 	else:
 		$AnimatedSprite2D.animation = "idle"
 		$AnimatedSprite2D.flip_v = false

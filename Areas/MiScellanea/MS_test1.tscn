@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=4 uid="uid://db11twc5jvbc2"]
+[gd_scene load_steps=11 format=4 uid="uid://db11twc5jvbc2"]
 
 [ext_resource type="Texture2D" uid="uid://bknn40hluhv6x" path="res://Terrain/Tilesets/testtileset.png" id="1_p2i7w"]
-[ext_resource type="PackedScene" uid="uid://d2ld0c10ukpg1" path="res://Characters/Playable/Tester/Testchar.tscn" id="2_4boo7"]
 [ext_resource type="Texture2D" uid="uid://oaqb3w6l7p2p" path="res://Graphics/SeaTowerWarpButton.png" id="3_phbby"]
 [ext_resource type="Script" path="res://Areas/MiScellanea/gotomstestst.gd" id="4_085jc"]
 [ext_resource type="Texture2D" uid="uid://duu34d67eysel" path="res://Graphics/TurbulentWhisperWarpButton.png" id="5_guwns"]
@@ -124,9 +123,6 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_o5536")
 
 [node name="Node2D" type="Node2D"]
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_4boo7")]
-visible = false
 
 [node name="Button" type="Button" parent="."]
 offset_left = -76.0
@@ -292,7 +288,8 @@ All fog but one light."
 
 [node name="Node" type="Node" parent="."]
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("9_eoopv")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("9_eoopv")]
+slide_on_ceiling = false
 
 [connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="Button2" method="_on_button_pressed"]
