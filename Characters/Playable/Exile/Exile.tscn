@@ -1,9 +1,8 @@
-[gd_scene load_steps=35 format=3 uid="uid://dqvv36meum2rq"]
+[gd_scene load_steps=34 format=3 uid="uid://dqvv36meum2rq"]
 
 [ext_resource type="Script" path="res://Characters/Playable/Exile/Exile.gd" id="1_ya1qa"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_uwvy7"]
 [ext_resource type="Texture2D" uid="uid://cxuowjgd1pm7d" path="res://Characters/Playable/Tester/testcharidle.png" id="3_cphh0"]
-[ext_resource type="Texture2D" uid="uid://bus8swyxyft4u" path="res://Characters/Playable/Exile/ExileIdleConcept.png" id="3_pyvwv"]
 [ext_resource type="Texture2D" uid="uid://cas5hymlj1c3s" path="res://Characters/Playable/Exile/ExileJump.png" id="4_fk8f5"]
 [ext_resource type="Texture2D" uid="uid://dix0k2likp8ux" path="res://Characters/Playable/Exile/ExileIdleAnim.png" id="4_oly64"]
 [ext_resource type="AudioStream" uid="uid://buymab2nl55k4" path="res://Sounds/Player/synthyjump.wav" id="4_rcg86"]
@@ -49,6 +48,10 @@ region = Rect2(80, 0, 20, 32)
 atlas = ExtResource("2_uwvy7")
 region = Rect2(100, 0, 20, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkrr1"]
+atlas = ExtResource("4_oly64")
+region = Rect2(93, 0, 22, 35)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_bsot2"]
 atlas = ExtResource("4_oly64")
 region = Rect2(24, 0, 22, 35)
@@ -60,10 +63,6 @@ region = Rect2(47, 0, 22, 35)
 [sub_resource type="AtlasTexture" id="AtlasTexture_mn3tx"]
 atlas = ExtResource("4_oly64")
 region = Rect2(70, 0, 22, 35)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nkrr1"]
-atlas = ExtResource("4_oly64")
-region = Rect2(93, 0, 22, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2w2gu"]
 atlas = ExtResource("4_oly64")
@@ -115,33 +114,33 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 4.0,
-"texture": ExtResource("3_pyvwv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bsot2")
-}, {
-"duration": 2.0,
-"texture": SubResource("AtlasTexture_i8ju4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_mn3tx")
-}, {
-"duration": 4.0,
+"duration": 240.0,
 "texture": SubResource("AtlasTexture_nkrr1")
 }, {
-"duration": 1.0,
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_bsot2")
+}, {
+"duration": 50.0,
+"texture": SubResource("AtlasTexture_i8ju4")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_mn3tx")
+}, {
+"duration": 240.0,
+"texture": SubResource("AtlasTexture_nkrr1")
+}, {
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_2w2gu")
 }, {
-"duration": 2.0,
+"duration": 50.0,
 "texture": SubResource("AtlasTexture_42fbc")
 }, {
-"duration": 1.0,
+"duration": 5.0,
 "texture": SubResource("AtlasTexture_4qxf1")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 60.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -179,6 +178,7 @@ light_mask = 2
 visibility_layer = 3
 sprite_frames = SubResource("SpriteFrames_a4yyl")
 animation = &"idle"
+frame_progress = 0.41855
 offset = Vector2(0, -0.5)
 
 [node name="Jumpsound" type="AudioStreamPlayer2D" parent="."]
