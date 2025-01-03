@@ -154,6 +154,12 @@ func _physics_process(delta):
 			jumpsLeft = 1 + bonusJumps;
 	#motion = move_and_collide(motion)
 	frame_selector();
+	if velocity.y < 0 and !is_on_wall():
+		$AnimatedSprite2D.animation = "jump"
+		$AnimatedSprite2D.flip_v = false
+	if velocity.y > 17 and !is_on_wall():
+		$AnimatedSprite2D.animation = "fall"
+		$AnimatedSprite2D.flip_v = false
 func frame_selector():
 	if Input.is_action_just_pressed("p1dash"):
 		$AnimatedSprite2D.animation = "dash"
@@ -167,9 +173,6 @@ func frame_selector():
 		$AnimatedSprite2D.flip_h = true;
 	if Input.is_action_pressed("p1right"):
 		$AnimatedSprite2D.flip_h = false;
-	if velocity.y < 0 and !is_on_wall():
-		$AnimatedSprite2D.animation = "jump"
-		$AnimatedSprite2D.flip_v = false
 	else:
 		$AnimatedSprite2D.animation = "idle"
 		$AnimatedSprite2D.flip_v = false
