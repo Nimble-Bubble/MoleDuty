@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dqvv36meum2rq"]
+[gd_scene load_steps=37 format=3 uid="uid://dqvv36meum2rq"]
 
 [ext_resource type="Script" path="res://Characters/Playable/Exile/Exile.gd" id="1_ya1qa"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_uwvy7"]
@@ -17,6 +17,8 @@
 [ext_resource type="AudioStream" uid="uid://c4lux45q67ra2" path="res://Sounds/Player/synthyairjump.wav" id="12_bw75l"]
 [ext_resource type="AudioStream" uid="uid://coaueuf8qpd67" path="res://Sounds/Player/synthypain.wav" id="13_q0ap7"]
 [ext_resource type="Texture2D" uid="uid://pf4e2xrk2qtg" path="res://Characters/Effects/DashOKIndicator.png" id="14_i3dp3"]
+[ext_resource type="AudioStream" uid="uid://6pf0j2jy831s" path="res://Sounds/Player/synthyzoomin.wav" id="18_sjvte"]
+[ext_resource type="AudioStream" uid="uid://d4etxpqyppx4n" path="res://Sounds/Player/synthyzoomout.wav" id="19_o0tw0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_83s8r"]
 size = Vector2(14, 30)
@@ -277,3 +279,9 @@ offset_top = -52.0
 offset_right = 20.0
 offset_bottom = -29.0
 horizontal_alignment = 1
+
+[node name="ZoomIn" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_sjvte")
+
+[node name="ZoomOut" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_o0tw0")

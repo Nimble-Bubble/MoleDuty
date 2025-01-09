@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var rid = get_rid()
-@export var defaultSpeed = 40 * (10 / 8);
+@export var defaultSpeed = 30 * (10 / 8);
 @export var defaultAcceleration = 10;
 @export var jumpsLeft = 1;
 @export var bonusJumps = 0;
@@ -60,6 +60,13 @@ func _physics_process(delta):
 			canAirJump = 0;
 		else:
 			canAirJump = 1;
+	if Input.is_action_just_pressed("togglezoom"):
+		if $Camera2D.zoom == Vector2(1, 1):
+			$Camera2D.set_zoom(Vector2(2, 2));
+			$ZoomIn.play();
+		else:
+			$Camera2D.set_zoom(Vector2(1, 1));
+			$ZoomOut.play();
 	if Input.is_action_just_pressed("reload"):
 		get_tree().reload_current_scene();
 		#$Painsound.play;
@@ -86,7 +93,7 @@ func _physics_process(delta):
 		#if dashTimer == 0:
 			#$DashOKIndicator.hidden = true;
 		if dashTimer == 50:
-			$Airjumpsound.play;
+			$Airjumpsound.play();
 		if dashTimer > 135 and velocity.y > 0:
 			velocity.y = 0;
 		if Input.is_action_just_pressed("p1dash"):
@@ -157,22 +164,42 @@ func _physics_process(delta):
 	if velocity.y < 0 and !is_on_wall():
 		$AnimatedSprite2D.animation = "jump"
 		$AnimatedSprite2D.flip_v = false
+		if Input.is_action_pressed("p1left"):
+			$AnimatedSprite2D.flip_h = true;
+		if Input.is_action_pressed("p1right"):
+			$AnimatedSprite2D.flip_h = false;
 	if velocity.y > 17 and !is_on_wall():
 		$AnimatedSprite2D.animation = "fall"
 		$AnimatedSprite2D.flip_v = false
+		if Input.is_action_pressed("p1left"):
+			$AnimatedSprite2D.flip_h = true;
+		if Input.is_action_pressed("p1right"):
+			$AnimatedSprite2D.flip_h = false;
 func frame_selector():
 	if Input.is_action_just_pressed("p1dash"):
 		$AnimatedSprite2D.animation = "dash"
 		$AnimatedSprite2D.flip_v = false
-	if velocity.y == 0:
-		if velocity.x != 0 and Input.is_action_pressed("p1right") or velocity.x != 0 and Input.is_action_pressed("p1left"):
-			$AnimatedSprite2D.animation = "walk"
-			$AnimatedSprite2D.flip_v = false
+	#if Input.is_action_pressed("p1left"):
+		#$AnimatedSprite2D.flip_h = true;
+		#if velocity.x != 0 and is_on_floor():
+			#$AnimatedSprite2D.animation = "walk"
+	#if Input.is_action_pressed("p1right"):
+		#$AnimatedSprite2D.flip_h = false;
+		#if velocity.x != 0 and is_on_floor():
+			#$AnimatedSprite2D.animation = "walk"
+	if is_on_floor() and velocity.x > -1 and velocity.x < 1:
+		$AnimatedSprite2D.animation = "idle"
+	if (Input.is_action_pressed("p1left") or Input.is_action_pressed("p1right")) and (velocity.x != 0 and is_on_floor()):
+		$AnimatedSprite2D.animation = "walk"
+		if Input.is_action_pressed("p1left"):
+			$AnimatedSprite2D.flip_h = true;
+		if Input.is_action_pressed("p1right"):
+			$AnimatedSprite2D.flip_h = false;
+	#if velocity.y == 0 or is_on_floor():
+		#if (velocity.x != 0 and Input.is_action_pressed("p1right")) or (velocity.x != 0 and Input.is_action_pressed("p1left")):
+			#$AnimatedSprite2D.animation = "walk"
+			#$AnimatedSprite2D.flip_v = false
 			#$AnimatedSprite2D.flip_h = velocity.x < 0
-	if Input.is_action_pressed("p1left"):
-		$AnimatedSprite2D.flip_h = true;
-	if Input.is_action_pressed("p1right"):
-		$AnimatedSprite2D.flip_h = false;
 	else:
 		$AnimatedSprite2D.animation = "idle"
 		$AnimatedSprite2D.flip_v = false
