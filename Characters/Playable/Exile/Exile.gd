@@ -82,9 +82,11 @@ func _physics_process(delta):
 	if (velocity.x <= -300) or (velocity.x >= 300):
 		velocity.x /= 1.01;
 		if (velocity.x <= -400) or (velocity.x >= 400):
-			velocity.x /= 1.02;
+			velocity.x /= 1.01;
 			if (velocity.x <= -500) or (velocity.x >= 500):
-				velocity.x /= 1.03;
+				velocity.x /= 1.01;
+		if is_on_floor():
+			velocity.x /= 1.053;
 	if canDash >= 1:
 		if dashTimer > 0:
 			dashTimer -= 1;
@@ -103,15 +105,15 @@ func _physics_process(delta):
 				else:
 					velocity.x = 2000;
 				$Dashsound.play();
-				dashTimer += 150;
+				dashTimer += 60;
 				#if velocity.y > 0:
 			else:
 				$Painsound.play();
 	#velocity.x *= 0.9;
-		if is_on_floor():
-			velocity.x /= 1.01;
-		else:
-			velocity.x /= 1.005;
+		#if is_on_floor() and !Input.is_action_pressed("p1left") and !Input.is_action_pressed("p1right"):
+			#velocity.x /= 1.01;
+		#else:
+			#velocity.x /= 1.005;
 	#if Input.is_action_just_pressed("p1dash") and canDash >= 1:
 		#if velocity.x < 0:
 			#velocity.x = -2000;
@@ -121,8 +123,8 @@ func _physics_process(delta):
 		#if velocity.y > 0:
 			#velocity.y = 0;
 	
-	if is_on_floor():
-		velocity.x *= 0.9;
+	if is_on_floor() and !Input.is_action_pressed("p1left") and !Input.is_action_pressed("p1right"):
+		velocity.x *= 0.925;
 	if !is_on_floor():
 		velocity.x *= 0.95;
 	

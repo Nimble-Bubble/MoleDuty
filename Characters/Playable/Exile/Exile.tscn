@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dqvv36meum2rq"]
+[gd_scene load_steps=40 format=3 uid="uid://dqvv36meum2rq"]
 
 [ext_resource type="Script" path="res://Characters/Playable/Exile/Exile.gd" id="1_ya1qa"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_uwvy7"]
@@ -8,8 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://dix0k2likp8ux" path="res://Characters/Playable/Exile/ExileIdleAnim.png" id="4_oly64"]
 [ext_resource type="AudioStream" uid="uid://buymab2nl55k4" path="res://Sounds/Player/synthyjump.wav" id="4_rcg86"]
 [ext_resource type="AudioStream" uid="uid://c6dwe7rsivu0w" path="res://Sounds/Player/synthydash.wav" id="5_g7t5e"]
+[ext_resource type="Texture2D" uid="uid://bckvd0copdcxb" path="res://Characters/Playable/Exile/ExileAttackPlaceholderAerial.png" id="6_nxeu2"]
 [ext_resource type="AudioStream" uid="uid://dqv6kjk2oo4k2" path="res://Sounds/Player/toggledash.mp3" id="6_u7o4l"]
 [ext_resource type="AudioStream" uid="uid://dwctqkdqkte01" path="res://Sounds/Player/dashunlock.wav" id="7_10g7k"]
+[ext_resource type="Texture2D" uid="uid://c64xo08h46tmd" path="res://Characters/Playable/Exile/ExileAttackPlaceholderDown.png" id="7_ttdac"]
+[ext_resource type="Texture2D" uid="uid://ctxfutmrayf6e" path="res://Characters/Playable/Exile/ExileAttackPlaceholderGrounded2.png" id="8_cueno"]
 [ext_resource type="AudioStream" uid="uid://bo7cu51mg0fxk" path="res://Sounds/Player/wallclimbunlock.wav" id="8_sadx6"]
 [ext_resource type="AudioStream" uid="uid://v5qdxia7awch" path="res://Sounds/Player/slideunlock.wav" id="9_7bf5y"]
 [ext_resource type="AudioStream" uid="uid://dvd0vj2v2enya" path="res://Sounds/Player/slamunlock.wav" id="10_pdvyh"]
@@ -163,6 +166,30 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_nxeu2")
+}],
+"loop": true,
+"name": &"unarmedattackaerial",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ttdac")
+}],
+"loop": true,
+"name": &"unarmedattackdair",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_cueno")
+}],
+"loop": true,
+"name": &"unarmedattackgrounded",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_kuk2w")
 }],
 "loop": true,
@@ -189,7 +216,6 @@ light_mask = 2
 visibility_layer = 3
 sprite_frames = SubResource("SpriteFrames_a4yyl")
 animation = &"idle"
-frame_progress = 0.181305
 offset = Vector2(0, -0.5)
 
 [node name="Jumpsound" type="AudioStreamPlayer2D" parent="."]
