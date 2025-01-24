@@ -302,3 +302,48 @@ offset_top = 1760.0
 offset_right = 21328.0
 offset_bottom = 14928.0
 color = Color(0.160016, 0.0803746, 0.087897, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2368.0
+offset_top = 1296.0
+offset_right = 2803.0
+offset_bottom = 1345.0
+text = "There are supposed to be desert hills in the background.
+I just haven't added that yet."
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 4016.0
+offset_top = 1472.0
+offset_right = 4563.0
+offset_bottom = 1495.0
+text = "You're not really meant to be up here before clearing Turbulent Tower.
+Even then, there are other, more clear paths you could take.
+There are supposed to be Val forts somewhere around here."
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 9520.0
+offset_top = 1608.0
+offset_right = 10265.0
+offset_bottom = 1709.0
+text = "There's supposed to be a Val watch tower somewhere around here.
+Even though typical protocol would be to evacuate the tower if attacked by a large enough force,
+One toure opted to stay, leaving his co-worker with survivor's guilt.
+Unfortunately, this was only the beginning of that co-worker's problems."
+
+[node name="Label4" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = 2
+offset_left = 4128.0
+offset_top = 1784.0
+offset_right = 4507.0
+offset_bottom = 1807.0
+text = "There might be some sort of secret here later on."
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 4600.0
+offset_top = 3120.0
+offset_right = 4929.0
+offset_bottom = 3143.0
+text = "This route is mostly a shortcut back to a 
+lower level of the caves.
+The Lance is roughly in this direction."
