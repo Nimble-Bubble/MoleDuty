@@ -128,6 +128,8 @@ func _physics_process(delta):
 	if !is_on_floor():
 		velocity.x *= 0.95;
 	
+	if Input.is_action_just_pressed("p1down"):
+		position.y += 1
 	if Input.is_action_just_pressed("p1jump") and jumpsLeft > 0:
 		if is_on_floor or is_on_wall:
 			$Jumpsound.play();
