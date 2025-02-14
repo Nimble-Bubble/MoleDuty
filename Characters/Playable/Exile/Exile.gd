@@ -124,7 +124,7 @@ func _physics_process(delta):
 			#velocity.y = 0;
 	
 	if is_on_floor() and !Input.is_action_pressed("p1left") and !Input.is_action_pressed("p1right"):
-		velocity.x *= 0.925;
+		velocity.x *= 0.75;
 	if !is_on_floor():
 		velocity.x *= 0.95;
 	
