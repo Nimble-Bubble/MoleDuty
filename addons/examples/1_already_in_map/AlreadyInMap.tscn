@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://brcku4gtruqk6"]
 
-[ext_resource type="Script" path="res://addons/examples/MainNode.gd" id="1_fljwg"]
-[ext_resource type="Script" path="res://addons/liquidsimulator/LiquidServer.gd" id="2_p5mg1"]
+[ext_resource type="Script" uid="uid://dq18d5dyqi7ew" path="res://addons/examples/MainNode.gd" id="1_fljwg"]
+[ext_resource type="Script" uid="uid://cjfjrlhs6fvyy" path="res://addons/liquidsimulator/LiquidServer.gd" id="2_p5mg1"]
 [ext_resource type="PackedScene" uid="uid://b4fssv5ogweg" path="res://addons/examples/Water.tscn" id="3_230ww"]
-[ext_resource type="Script" path="res://addons/liquidsimulator/LiquidMap.gd" id="4_i7d8g"]
+[ext_resource type="Script" uid="uid://6qfmf2kb13q2" path="res://addons/liquidsimulator/LiquidMap.gd" id="4_i7d8g"]
 [ext_resource type="TileSet" uid="uid://c8wk4uvt8kkhe" path="res://addons/examples/Tiles.tres" id="5_1p777"]
 
 [sub_resource type="Resource" id="Resource_vyftb"]

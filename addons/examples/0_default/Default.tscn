@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://cjqb4xkhht5wh"]
 
-[ext_resource type="Script" path="res://addons/examples/MainNode.gd" id="1_k43bw"]
+[ext_resource type="Script" uid="uid://dq18d5dyqi7ew" path="res://addons/examples/MainNode.gd" id="1_k43bw"]
 [ext_resource type="TileSet" uid="uid://c8wk4uvt8kkhe" path="res://addons/examples/Tiles.tres" id="2_g1vsp"]
-[ext_resource type="Script" path="res://addons/liquidsimulator/LiquidServer.gd" id="2_m4gge"]
+[ext_resource type="Script" uid="uid://cjfjrlhs6fvyy" path="res://addons/liquidsimulator/LiquidServer.gd" id="2_m4gge"]
 [ext_resource type="PackedScene" uid="uid://b4fssv5ogweg" path="res://addons/examples/Water.tscn" id="3_86xll"]
-[ext_resource type="Script" path="res://addons/liquidsimulator/LiquidMap.gd" id="4_jk7n4"]
+[ext_resource type="Script" uid="uid://6qfmf2kb13q2" path="res://addons/liquidsimulator/LiquidMap.gd" id="4_jk7n4"]
 
 [sub_resource type="Resource" id="Resource_vyftb"]
 script = ExtResource("4_jk7n4")

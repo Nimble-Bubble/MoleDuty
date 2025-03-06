@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://d2ld0c10ukpg1"]
 
-[ext_resource type="Script" path="res://Characters/Playable/Tester/TestCharacter.gd" id="1_xqn73"]
+[ext_resource type="Script" uid="uid://c45kyxf44b86b" path="res://Characters/Playable/Tester/TestCharacter.gd" id="1_xqn73"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_6tm8e"]
 [ext_resource type="Texture2D" uid="uid://cxuowjgd1pm7d" path="res://Characters/Playable/Tester/testcharidle.png" id="3_eajhb"]
 [ext_resource type="AudioStream" uid="uid://buymab2nl55k4" path="res://Sounds/Player/synthyjump.wav" id="4_rduk6"]
