@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var rid = get_rid()
-@export var defaultSpeed = 30 * (10 / 8);
+@export var defaultSpeed = 20 * (10 / 8);
 @export var defaultAcceleration = 10;
 @export var jumpsLeft = 1;
 @export var bonusJumps = 0;
