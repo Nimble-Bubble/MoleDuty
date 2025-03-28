@@ -25,7 +25,8 @@ offset_left = 1232.0
 offset_top = 208.0
 offset_right = 1747.0
 offset_bottom = 231.0
-text = "This is where you learn to jump using Space, Z, A, or whatever else."
+text = "This is where you learn to jump using Space, Z, A, or whatever else.
+You can jump up to eight blocks high."
 
 [node name="Label" type="Label" parent="Layer0/Label"]
 layout_mode = 0
