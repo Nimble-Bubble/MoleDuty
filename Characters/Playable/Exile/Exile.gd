@@ -83,8 +83,8 @@ func _physics_process(delta):
 		velocity.x /= 1.01;
 		if (velocity.x <= -400) or (velocity.x >= 400):
 			velocity.x /= 1.01;
-			if (velocity.x <= -500) or (velocity.x >= 500):
-				velocity.x /= 1.01;
+			#if (velocity.x <= -500) or (velocity.x >= 500):
+				#velocity.x /= 1.01;
 		if is_on_floor():
 			velocity.x /= 1.053;
 	if canDash >= 1:
@@ -100,10 +100,14 @@ func _physics_process(delta):
 			velocity.y = 0;
 		if Input.is_action_just_pressed("p1dash"):
 			if dashTimer < 1:
-				if velocity.x < 0:
-					velocity.x = -2000;
-				else:
-					velocity.x = 2000;
+				if ($AnimatedSprite2D.flip_h == true):
+					velocity.x -= 1500;
+					if velocity.x > -1500:
+						velocity.x = -1500;
+				if ($AnimatedSprite2D.flip_h == false):
+					velocity.x += 1500;
+					if velocity.x < 1500:
+						velocity.x = 1500;
 				$Dashsound.play();
 				dashTimer += 60;
 				#if velocity.y > 0:
@@ -124,7 +128,10 @@ func _physics_process(delta):
 			#velocity.y = 0;
 	
 	if is_on_floor() and !Input.is_action_pressed("p1left") and !Input.is_action_pressed("p1right"):
-		velocity.x *= 0.75;
+		if (dashTimer < 1 or dashTimer > 60):
+			velocity.x *= 0.5;
+		else:
+			velocity.x *= 0.95;
 	if !is_on_floor():
 		velocity.x *= 0.95;
 	
@@ -133,6 +140,11 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("p1jump") and jumpsLeft > 0:
 		if is_on_floor or is_on_wall:
 			$Jumpsound.play();
+			#Quick turn on jump
+			if Input.is_action_pressed("p1left") and velocity.x > 0 and !Input.is_action_pressed("p1right"):
+				velocity.x *= -2;
+			if Input.is_action_pressed("p1right") and velocity.x < 0 and !Input.is_action_pressed("p1left"):
+				velocity.x *= -2;
 		if !is_on_floor and !is_on_wall:
 			$Airjumpsound.play();
 		if is_on_wall() and canClimb == 1:

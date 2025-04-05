@@ -82,6 +82,14 @@ This transitions into an open field with the Brill Comb's forest and the Frigid 
 This splits off into a forested section on the left and a hill section on the right.
 Both paths lead to new regions beyond Brill Comb."
 
+[node name="Label8" type="Label" parent="Layer0"]
+offset_left = 1000.0
+offset_top = -376.0
+offset_right = 1995.0
+offset_bottom = -353.0
+text = "This might be a rotating wheel of platforms (think the custom level object in Ultimate Chicken Horse or Super Smash Bros. Brawl)
+And beneath it, there may be spikes or something. That's a maybe, given how odd that would be for an art room."
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_3rsbp")]
 position = Vector2(0, 79)
 
