@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bcv2vp6s2n41n" path="res://Characters/Playable/Exile/Exile.gd" id="1_ya1qa"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_uwvy7"]
 [ext_resource type="Texture2D" uid="uid://dtrispqdstpgr" path="res://Characters/Playable/Exile/ExileFall.png" id="3_0con2"]
-[ext_resource type="Texture2D" uid="uid://cxuowjgd1pm7d" path="res://Characters/Playable/Tester/testcharidle.png" id="3_cphh0"]
 [ext_resource type="Texture2D" uid="uid://cas5hymlj1c3s" path="res://Characters/Playable/Exile/ExileJump.png" id="4_fk8f5"]
 [ext_resource type="Texture2D" uid="uid://dix0k2likp8ux" path="res://Characters/Playable/Exile/ExileIdleAnim.png" id="4_oly64"]
 [ext_resource type="AudioStream" uid="uid://buymab2nl55k4" path="res://Sounds/Player/synthyjump.wav" id="4_rcg86"]
@@ -18,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://dvd0vj2v2enya" path="res://Sounds/Player/slamunlock.wav" id="10_pdvyh"]
 [ext_resource type="AudioStream" uid="uid://dqp8uuw56gq2k" path="res://Sounds/Player/airjumpunlock.wav" id="11_v11jf"]
 [ext_resource type="AudioStream" uid="uid://c4lux45q67ra2" path="res://Sounds/Player/synthyairjump.wav" id="12_bw75l"]
+[ext_resource type="Texture2D" uid="uid://deu45ofmbksu2" path="res://Assets/Lights/RadialGradientLight1.png" id="12_linh5"]
 [ext_resource type="AudioStream" uid="uid://coaueuf8qpd67" path="res://Sounds/Player/synthypain.wav" id="13_q0ap7"]
 [ext_resource type="Texture2D" uid="uid://pf4e2xrk2qtg" path="res://Characters/Effects/DashOKIndicator.png" id="14_i3dp3"]
 [ext_resource type="AudioStream" uid="uid://6pf0j2jy831s" path="res://Sounds/Player/synthyzoomin.wav" id="18_sjvte"]
@@ -231,18 +231,6 @@ max_polyphony = 5
 [node name="ToggleDash" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_u7o4l")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
-visible = false
-show_behind_parent = true
-light_mask = 3
-visibility_layer = 3
-z_index = -1
-energy = 1.53
-range_layer_max = 5
-shadow_enabled = true
-shadow_item_cull_mask = 3
-texture = ExtResource("3_cphh0")
-
 [node name="DashUnlock" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_10g7k")
 volume_db = -10.0
@@ -311,3 +299,11 @@ stream = ExtResource("18_sjvte")
 
 [node name="ZoomOut" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_o0tw0")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.5
+range_layer_min = -110
+range_layer_max = 100
+shadow_enabled = true
+texture = ExtResource("12_linh5")
+texture_scale = 0.25
