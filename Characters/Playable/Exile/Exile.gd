@@ -6,11 +6,13 @@ extends CharacterBody2D
 @export var jumpsLeft = 1;
 @export var bonusJumps = 0;
 @export var dashTimer = 200;
+@export var jumpTimer = 15;
 var canDash;
 var canClimb;
 var canSlide;
 var canSlam;
 var canAirJump;
+var inLiquid;
 
 func _init():
 	velocity.y = 10;
@@ -134,6 +136,13 @@ func _physics_process(delta):
 			velocity.x *= 0.95;
 	if !is_on_floor():
 		velocity.x *= 0.95;
+		jumpTimer -= 1;
+	if jumpTimer <= 0:
+		if canAirJump == 1:
+			jumpsLeft = 1 + bonusJumps;
+		else:
+			jumpsLeft = 0 + bonusJumps;
+		
 	
 	if Input.is_action_just_pressed("p1down"):
 		position.y += 1
@@ -164,10 +173,15 @@ func _physics_process(delta):
 	if is_on_floor():
 		#if (velocity.y < 0):
 			#velocity.y = 0;
+		jumpTimer = 15;
 		if canAirJump == 1:
 			jumpsLeft = 2 + bonusJumps;
 		else:
 			jumpsLeft = 1 + bonusJumps;
+			
+	if inLiquid:
+		jumpsLeft = 1 + bonusJumps;
+		velocity.y *= 0.95;
 	if is_on_wall() and canClimb == 1:
 		if Input.is_action_pressed("p1left") or Input.is_action_pressed("p1right"):
 			velocity.y *= 0.95;
