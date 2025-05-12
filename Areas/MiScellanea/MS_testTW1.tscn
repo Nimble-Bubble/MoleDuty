@@ -109,6 +109,15 @@ text = "This is a \"secret\" passageway for those who work in the tower.
 It leads towards working and living spaces.
 Don't worry too much about the big clock in the meeting room."
 
+[node name="Label" type="Label" parent="SecretPathLabel"]
+layout_mode = 0
+offset_left = 5963.63
+offset_top = 1818.83
+offset_right = 6003.63
+offset_bottom = 1841.83
+text = "If you go to the right,
+the lower path leads to the Sun Temple through Moisture Pits."
+
 [node name="FallJokeLabel" type="Label" parent="."]
 offset_left = -1859.0
 offset_top = 1975.0
