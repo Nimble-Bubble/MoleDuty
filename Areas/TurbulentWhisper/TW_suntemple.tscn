@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://dra37acpbly2e"]
+[gd_scene load_steps=17 format=4 uid="uid://dra37acpbly2e"]
 
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="1_5ue0m"]
 [ext_resource type="Texture2D" uid="uid://cl0ps872abv7u" path="res://Graphics/Backgrounds/TWCaveBG1.png" id="2_q0j24"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://cj7f6g3uyrs4u" path="res://Objects/Dynamic/1x1BreakableBox.gd" id="7_2x4xq"]
 [ext_resource type="Texture2D" uid="uid://dpftpd7fw1a7p" path="res://Objects/Dynamic/1x1BreakableBox.png" id="7_ru828"]
 [ext_resource type="Texture2D" uid="uid://5mfy73kah2ig" path="res://Objects/Openable/2x2Chest.png" id="9_i7vsw"]
+[ext_resource type="Texture2D" uid="uid://yihxk4e0h47q" path="res://Objects/Dynamic/SolidTopSailBoat.png" id="10_bldy5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jg6xp"]
 size = Vector2(79, 52)
@@ -240,3 +241,19 @@ text = "This is a small puzzle to lift up a ship for access to a lab to rotate t
 position = Vector2(504, 3216)
 shadow_enabled = true
 texture = ExtResource("6_2vkvu")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 2608.0
+offset_top = 3392.0
+offset_right = 3062.0
+offset_bottom = 3441.0
+text = "> Moisture Pits (several watery rooms) >
+< Sun Temple (primarily the bottom entrance and village) <"
+horizontal_alignment = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(496, 3296)
+rotation = 3.14159
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("10_bldy5")
