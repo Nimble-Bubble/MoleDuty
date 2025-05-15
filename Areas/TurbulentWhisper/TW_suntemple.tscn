@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://cj7f6g3uyrs4u" path="res://Objects/Dynamic/1x1BreakableBox.gd" id="7_2x4xq"]
 [ext_resource type="Texture2D" uid="uid://dpftpd7fw1a7p" path="res://Objects/Dynamic/1x1BreakableBox.png" id="7_ru828"]
 [ext_resource type="Texture2D" uid="uid://5mfy73kah2ig" path="res://Objects/Openable/2x2Chest.png" id="9_i7vsw"]
-[ext_resource type="Texture2D" uid="uid://yihxk4e0h47q" path="res://Objects/Dynamic/SolidTopSailBoat.png" id="10_bldy5"]
+[ext_resource type="PackedScene" uid="uid://b3oqpav8754xy" path="res://Objects/Dynamic/MovableBoat.tscn" id="10_bldy5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jg6xp"]
 size = Vector2(79, 52)
@@ -251,9 +251,7 @@ text = "> Moisture Pits (several watery rooms) >
 < Sun Temple (primarily the bottom entrance and village) <"
 horizontal_alignment = 1
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" parent="." instance=ExtResource("10_bldy5")]
+z_index = -1
 position = Vector2(496, 3296)
 rotation = 3.14159
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-texture = ExtResource("10_bldy5")

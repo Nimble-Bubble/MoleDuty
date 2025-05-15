@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3oqpav8754xy"]
+
+[ext_resource type="Texture2D" uid="uid://yihxk4e0h47q" path="res://Objects/Dynamic/SolidTopSailBoat.png" id="1_n1vfy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bldy5"]
+size = Vector2(160, 16)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(0, -64)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_n1vfy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9.15527e-05, -88)
+shape = SubResource("RectangleShape2D_bldy5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 48)
+polygon = PackedVector2Array(160, 0, 64, 48, -64, 48, -160, 0)
