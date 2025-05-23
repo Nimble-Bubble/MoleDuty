@@ -189,6 +189,11 @@ tile_set = SubResource("TileSet_l8kov")
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_yhokx")]
 position = Vector2(816, 256)
+canDash = 1
+canClimb = 1
+canSlide = 1
+canSlam = 1
+canAirJump = 1
 
 [node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D2"]
 show_behind_parent = true

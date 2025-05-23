@@ -7,12 +7,12 @@ extends CharacterBody2D
 @export var bonusJumps = 0;
 @export var dashTimer = 200;
 @export var jumpTimer = 15;
-var canDash;
-var canClimb;
-var canSlide;
-var canSlam;
-var canAirJump;
-var inLiquid;
+@export var canDash = 0;
+@export var canClimb = 0;
+@export var canSlide = 0;
+@export var canSlam = 0;
+@export var canAirJump = 0;
+@export var inLiquid = 0;
 
 func _init():
 	velocity.y = 10;
