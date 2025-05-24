@@ -183,6 +183,7 @@ func _physics_process(delta):
 		jumpsLeft = 1 + bonusJumps;
 		velocity.y *= 0.95;
 	if is_on_wall() and canClimb == 1:
+		jumpTimer = 15;
 		if Input.is_action_pressed("p1left") or Input.is_action_pressed("p1right"):
 			velocity.y *= 0.95;
 		if canAirJump == 1:
@@ -206,6 +207,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("p1right"):
 			$AnimatedSprite2D.flip_h = false;
 func frame_selector():
+	$AnimatedSprite2D.play();
 	if Input.is_action_just_pressed("p1dash"):
 		$AnimatedSprite2D.animation = "dash"
 		$AnimatedSprite2D.flip_v = false
