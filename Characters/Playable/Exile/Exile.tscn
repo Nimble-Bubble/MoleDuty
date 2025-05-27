@@ -246,7 +246,7 @@ light_mask = 2
 visibility_layer = 3
 sprite_frames = SubResource("SpriteFrames_a4yyl")
 animation = &"idle"
-offset = Vector2(0, -0.5)
+offset = Vector2(0, -1)
 
 [node name="Jumpsound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_rcg86")
@@ -331,6 +331,7 @@ stream = ExtResource("18_sjvte")
 stream = ExtResource("19_o0tw0")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -1)
 energy = 0.5
 range_layer_min = -110
 range_layer_max = 100
