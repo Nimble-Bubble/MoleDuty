@@ -24,6 +24,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/vsync/vsync_mode=2
 
+[global_group]
+
+Water="Typical harmless liquid."
+
 [importer_defaults]
 
 animation_library={

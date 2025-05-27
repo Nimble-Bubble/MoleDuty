@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Exile
+
 @onready var rid = get_rid()
 @export var defaultSpeed = 20 * (10 / 8);
 @export var defaultAcceleration = 10;
@@ -12,7 +14,7 @@ extends CharacterBody2D
 @export var canSlide = 0;
 @export var canSlam = 0;
 @export var canAirJump = 0;
-@export var inLiquid = 0;
+static var inLiquid = 0;
 
 func _init():
 	velocity.y = 10;
