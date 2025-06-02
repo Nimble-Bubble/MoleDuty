@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dqvv36meum2rq"]
+[gd_scene load_steps=47 format=3 uid="uid://dqvv36meum2rq"]
 
 [ext_resource type="Script" uid="uid://bcv2vp6s2n41n" path="res://Characters/Playable/Exile/Exile.gd" id="1_ya1qa"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_uwvy7"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://v5qdxia7awch" path="res://Sounds/Player/slideunlock.wav" id="9_7bf5y"]
 [ext_resource type="Texture2D" uid="uid://dbvxxyg331inw" path="res://Characters/Playable/Exile/ExileRun4Frame.png" id="9_hglhb"]
 [ext_resource type="AudioStream" uid="uid://dvd0vj2v2enya" path="res://Sounds/Player/slamunlock.wav" id="10_pdvyh"]
+[ext_resource type="Texture2D" uid="uid://r8e7qmgh0mep" path="res://Characters/Playable/Exile/ExileWallClimb.png" id="10_x4dg1"]
 [ext_resource type="AudioStream" uid="uid://dqp8uuw56gq2k" path="res://Sounds/Player/airjumpunlock.wav" id="11_v11jf"]
 [ext_resource type="AudioStream" uid="uid://c4lux45q67ra2" path="res://Sounds/Player/synthyairjump.wav" id="12_bw75l"]
 [ext_resource type="Texture2D" uid="uid://deu45ofmbksu2" path="res://Assets/Lights/RadialGradientLight1.png" id="12_linh5"]
@@ -217,6 +218,14 @@ animations = [{
 "loop": true,
 "name": &"walk",
 "speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_x4dg1")
+}],
+"loop": true,
+"name": &"wallclimb",
+"speed": 5.0
 }]
 
 [sub_resource type="Animation" id="Animation_hglhb"]

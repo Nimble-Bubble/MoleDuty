@@ -194,6 +194,8 @@ func _physics_process(delta):
 			jumpsLeft = 1 + bonusJumps;
 	#motion = move_and_collide(motion)
 	frame_selector();
+	if is_on_wall() and canClimb:
+		$AnimatedSprite2D.animation = "wallclimb"
 	if velocity.y < 0 and !is_on_wall():
 		$AnimatedSprite2D.animation = "jump"
 		$AnimatedSprite2D.flip_v = false
