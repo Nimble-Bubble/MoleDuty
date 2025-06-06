@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://1ey6r674w30"]
+[gd_scene load_steps=7 format=4 uid="uid://1ey6r674w30"]
 
 [ext_resource type="TileSet" uid="uid://bbeb2drxaemiu" path="res://Terrain/Tilesets/TestTileset2.tres" id="1_i78r6"]
 [ext_resource type="Texture2D" uid="uid://xlkql00jqqwh" path="res://Objects/Static/HeadlessExileStatue.png" id="3_v4jbw"]
 [ext_resource type="Texture2D" uid="uid://clm7120tkp1nc" path="res://Objects/Static/AllenTheThing.png" id="4_xj376"]
 [ext_resource type="Texture2D" uid="uid://dq6ttq10s46hw" path="res://Graphics/DropCommandInstruction.png" id="5_m7g1k"]
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="6_3rsbp"]
+[ext_resource type="PackedScene" uid="uid://s4lilj7o5afg" path="res://Characters/Machines/BarnacleJonesJr.tscn" id="6_cvlmw"]
 
 [node name="MsTestBc1" type="Node2D"]
 
@@ -56,10 +57,10 @@ text = "This part is supposed to introduce you
 to platforms and ladders."
 
 [node name="Label5" type="Label" parent="Layer0"]
-offset_left = -656.0
-offset_top = -1376.0
-offset_right = 114.0
-offset_bottom = -1327.0
+offset_left = -560.0
+offset_top = -2400.0
+offset_right = 210.0
+offset_bottom = -2351.0
 text = "This map is a hiding spot for artistic Toures known as the \"art room\" or \"atrum\".
 Allen was brought into the art room because the artists thought he made for a good sculpture base."
 
@@ -105,18 +106,24 @@ position = Vector2(1960, 80)
 texture = ExtResource("3_v4jbw")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = -184.0
-offset_top = -1176.0
-offset_right = -104.0
-offset_bottom = -1148.0
+offset_left = -216.0
+offset_top = -2328.0
+offset_right = -136.0
+offset_bottom = -2300.0
 color = Color(0.387389, 0.387389, 0.387389, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect2"]
 z_index = 1
-layout_mode = 0
-offset_left = 8.0
-offset_right = 88.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.0
+anchor_top = -24.857
+anchor_right = -1.0
+anchor_bottom = -24.857
+offset_left = 88.0
+offset_top = 695.996
+offset_right = 168.0
+offset_bottom = 719.996
 text = "/at.rum/"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -128,3 +135,6 @@ texture = ExtResource("4_xj376")
 modulate = Color(0.62, 0.62, 0.62, 1)
 position = Vector2(2199, -150)
 texture = ExtResource("5_m7g1k")
+
+[node name="BarnacleJonesJr" parent="." instance=ExtResource("6_cvlmw")]
+position = Vector2(2232, 88)

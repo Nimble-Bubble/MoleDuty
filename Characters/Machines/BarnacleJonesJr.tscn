@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://s4lilj7o5afg"]
+[gd_scene load_steps=6 format=3 uid="uid://s4lilj7o5afg"]
 
+[ext_resource type="Script" uid="uid://ba5amhtk7txt6" path="res://Characters/Machines/BarnacleJonesJr.gd" id="1_1is2t"]
 [ext_resource type="Texture2D" uid="uid://d0jiv1vngpd6x" path="res://Characters/Machines/BarJoJrConcept.png" id="1_vh80x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1is2t"]
@@ -13,7 +14,22 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_1is2t"]
+radius = 256.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ni5i"]
+radius = 8.0
+
+[node name="BarnacleJonesJr" type="CharacterBody2D"]
+script = ExtResource("1_1is2t")
 
 [node name="BarJoJrConcept" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1is2t")
+
+[node name="BarJoJrDetectRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarJoJrDetectRange"]
+shape = SubResource("CircleShape2D_1is2t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4ni5i")

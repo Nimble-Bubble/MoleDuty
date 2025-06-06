@@ -18,7 +18,7 @@ static var inLiquid = 0;
 
 func _init():
 	velocity.y = 10;
-	canDash = 0;
+	#canDash = 0;
 func _physics_process(delta):
 	var _vel = Vector2()
 	var grav = 981
