@@ -23,6 +23,7 @@ func _physics_process(delta):
 	var _vel = Vector2()
 	var grav = 981
 	var direction = Input.get_axis("p1left", "p1right")
+	#This sets up the velocity text.
 	$VelXLabel.text = str(velocity.x)
 	$VelYLabel.text = str(velocity.y)
 	slide_on_ceiling = false;
@@ -30,6 +31,8 @@ func _physics_process(delta):
 	$VelYLabel.text = str(velocity.y);
 	$DashLabel.text = str(dashTimer);
 	#floor_stop_on_slope = false;
+	#These are mostly debug commands to check if abilities are working.
+	#They could also be considered cheats of sorts.
 	if Input.is_action_just_pressed("togglevelocitylabel"):
 		$VelXLabel.visible = true;
 		$VelYLabel.visible = true;
@@ -74,11 +77,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("reload"):
 		get_tree().reload_current_scene();
 		#$Painsound.play;
-	#if Input.is_action_just_pressed("debugvelocity"):
-		#$VelDebug.visible = true;
-		#$VelXLabel.visible = true;
-		#$VelYLabel.visible = true;
-		#$DashLabel.visible = true;
+	#This is where the movement code begins.
 	if Input.is_action_pressed("p1left"):
 		velocity.x -= defaultSpeed;
 	if Input.is_action_pressed("p1right"):
@@ -151,7 +150,8 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("p1jump") and jumpsLeft > 0:
 		if is_on_floor or is_on_wall:
 			$Jumpsound.play();
-			#Quick turn on jump
+			#You can perform a "flip" (note: character does not flip visually) by turning and quickly jumping.
+			#A "flip" can go farther than a normal jump.
 			if Input.is_action_pressed("p1left") and velocity.x > 0 and !Input.is_action_pressed("p1right"):
 				velocity.x *= -2;
 			if Input.is_action_pressed("p1right") and velocity.x < 0 and !Input.is_action_pressed("p1left"):
@@ -181,8 +181,13 @@ func _physics_process(delta):
 		else:
 			jumpsLeft = 1 + bonusJumps;
 			
+	#If the character is in a liquid zone (e.g. water), their vertical movement is slowed.
+	#Fortunately, the character can "swim" (jump infinitely) like how Terraria's Flipper item works.
 	if inLiquid:
-		jumpsLeft = 1 + bonusJumps;
+		if canAirJump == 1:
+			jumpsLeft = 2 + bonusJumps;
+		else:
+			jumpsLeft = 1 + bonusJumps;
 		velocity.y *= 0.95;
 	if is_on_wall() and canClimb == 1:
 		jumpTimer = 15;
