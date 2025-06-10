@@ -199,6 +199,27 @@ func _physics_process(delta):
 			jumpsLeft = 1 + bonusJumps;
 	#motion = move_and_collide(motion)
 	frame_selector();
+	#frame_selector2 runs after frame_selector, so it's kind of a priority thing
+	frame_selector2();
+func frame_selector():
+	#Given the existence of that whole Animator thing, I'm not sure this is normal.
+	#This is kind of how I did it for that Terraria mod
+	$AnimatedSprite2D.play();
+	if Input.is_action_just_pressed("p1dash"):
+		$AnimatedSprite2D.animation = "dash"
+		$AnimatedSprite2D.flip_v = false
+	if is_on_floor() and velocity.x > -1 and velocity.x < 1:
+		$AnimatedSprite2D.animation = "idle"
+	if (Input.is_action_pressed("p1left") or Input.is_action_pressed("p1right")) and (velocity.x != 0 and is_on_floor()):
+		$AnimatedSprite2D.animation = "walk"
+		if Input.is_action_pressed("p1left"):
+			$AnimatedSprite2D.flip_h = true;
+		if Input.is_action_pressed("p1right"):
+			$AnimatedSprite2D.flip_h = false;
+	else:
+		$AnimatedSprite2D.animation = "idle"
+		$AnimatedSprite2D.flip_v = false
+func frame_selector2():
 	if is_on_wall() and canClimb:
 		$AnimatedSprite2D.animation = "wallclimb"
 	if velocity.y < 0 and !is_on_wall():
@@ -215,34 +236,6 @@ func _physics_process(delta):
 			$AnimatedSprite2D.flip_h = true;
 		if Input.is_action_pressed("p1right"):
 			$AnimatedSprite2D.flip_h = false;
-func frame_selector():
-	$AnimatedSprite2D.play();
-	if Input.is_action_just_pressed("p1dash"):
-		$AnimatedSprite2D.animation = "dash"
-		$AnimatedSprite2D.flip_v = false
-	#if Input.is_action_pressed("p1left"):
-		#$AnimatedSprite2D.flip_h = true;
-		#if velocity.x != 0 and is_on_floor():
-			#$AnimatedSprite2D.animation = "walk"
-	#if Input.is_action_pressed("p1right"):
-		#$AnimatedSprite2D.flip_h = false;
-		#if velocity.x != 0 and is_on_floor():
-			#$AnimatedSprite2D.animation = "walk"
-	if is_on_floor() and velocity.x > -1 and velocity.x < 1:
-		$AnimatedSprite2D.animation = "idle"
-	if (Input.is_action_pressed("p1left") or Input.is_action_pressed("p1right")) and (velocity.x != 0 and is_on_floor()):
-		$AnimatedSprite2D.animation = "walk"
-		if Input.is_action_pressed("p1left"):
-			$AnimatedSprite2D.flip_h = true;
-		if Input.is_action_pressed("p1right"):
-			$AnimatedSprite2D.flip_h = false;
-	#if velocity.y == 0 or is_on_floor():
-		#if (velocity.x != 0 and Input.is_action_pressed("p1right")) or (velocity.x != 0 and Input.is_action_pressed("p1left")):
-			#$AnimatedSprite2D.animation = "walk"
-			#$AnimatedSprite2D.flip_v = false
-			#$AnimatedSprite2D.flip_h = velocity.x < 0
-	else:
-		$AnimatedSprite2D.animation = "idle"
-		$AnimatedSprite2D.flip_v = false
+	
 #func _retired():
 	
