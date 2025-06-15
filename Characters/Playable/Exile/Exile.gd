@@ -14,6 +14,7 @@ class_name Exile
 @export var canSlide = 0;
 @export var canSlam = 0;
 @export var canAirJump = 0;
+@export var hasLight = 0;
 static var inLiquid = 0;
 
 func _init():
@@ -76,7 +77,17 @@ func _physics_process(delta):
 			$ZoomOut.play();
 	if Input.is_action_just_pressed("reload"):
 		get_tree().reload_current_scene();
-		#$Painsound.play;
+		#$Painsound.play();
+	if hasLight == 0:
+		$ExiLight.visible = false;
+	if hasLight == 1:
+		$ExiLight.visible = true;
+	if Input.is_action_just_pressed("p1flashlight"):
+		if $ExiLight.visible == false:
+			hasLight = 1;
+		if $ExiLight.visible == true:
+			hasLight = 0;
+		$FlashlightToggle.play();
 	#This is where the movement code begins.
 	if Input.is_action_pressed("p1left"):
 		velocity.x -= defaultSpeed;

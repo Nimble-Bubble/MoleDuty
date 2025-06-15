@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dqvv36meum2rq"]
+[gd_scene load_steps=48 format=3 uid="uid://dqvv36meum2rq"]
 
 [ext_resource type="Script" uid="uid://bcv2vp6s2n41n" path="res://Characters/Playable/Exile/Exile.gd" id="1_ya1qa"]
 [ext_resource type="Texture2D" uid="uid://drrekw0bk2kly" path="res://Characters/Playable/Tester/testcharidle-sheet.png" id="2_uwvy7"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://pf4e2xrk2qtg" path="res://Characters/Effects/DashOKIndicator.png" id="14_i3dp3"]
 [ext_resource type="AudioStream" uid="uid://6pf0j2jy831s" path="res://Sounds/Player/synthyzoomin.wav" id="18_sjvte"]
 [ext_resource type="AudioStream" uid="uid://d4etxpqyppx4n" path="res://Sounds/Player/synthyzoomout.wav" id="19_o0tw0"]
+[ext_resource type="AudioStream" uid="uid://dt3hmpi5tw5q7" path="res://Sounds/Player/synthyflashlight.wav" id="25_qk6h6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_83s8r"]
 size = Vector2(14, 30)
@@ -236,7 +237,7 @@ _data = {
 &"walk": SubResource("Animation_hglhb")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 3
 floor_max_angle = 1.0472
 floor_snap_length = 0.1
@@ -339,7 +340,7 @@ stream = ExtResource("18_sjvte")
 [node name="ZoomOut" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_o0tw0")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="ExiLight" type="PointLight2D" parent="."]
 position = Vector2(0, -1)
 energy = 0.5
 range_layer_min = -110
@@ -352,3 +353,6 @@ texture_scale = 0.25
 libraries = {
 &"": SubResource("AnimationLibrary_x4dg1")
 }
+
+[node name="FlashlightToggle" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("25_qk6h6")
