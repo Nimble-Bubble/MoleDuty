@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://dra37acpbly2e"]
+[gd_scene load_steps=19 format=4 uid="uid://dra37acpbly2e"]
 
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="1_5ue0m"]
 [ext_resource type="Texture2D" uid="uid://cl0ps872abv7u" path="res://Graphics/Backgrounds/TWCaveBG1.png" id="2_q0j24"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://5mfy73kah2ig" path="res://Objects/Openable/2x2Chest.png" id="9_i7vsw"]
 [ext_resource type="PackedScene" uid="uid://b3oqpav8754xy" path="res://Objects/Dynamic/MovableBoat.tscn" id="10_bldy5"]
 [ext_resource type="Script" uid="uid://bwe3n6id8pelw" path="res://Areas/TurbulentWhisper/WaterArea1.gd" id="11_h4mhq"]
+[ext_resource type="PackedScene" uid="uid://s4lilj7o5afg" path="res://Characters/Machines/BarnacleJonesJr.tscn" id="12_hk32d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jg6xp"]
 size = Vector2(79, 52)
@@ -261,6 +262,7 @@ shape = SubResource("RectangleShape2D_2x4xq")
 shape = SubResource("RectangleShape2D_i7vsw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.669202, 0.539037, 0.454129, 1)
 z_index = -1
 position = Vector2(-416, -378)
 sprite_frames = SubResource("SpriteFrames_hk32d")
@@ -339,3 +341,7 @@ offset_right = 2967.0
 offset_bottom = 2601.0
 text = "This valve will raise the water level, making the boat rise.
 Of course, you still have to rotate the boat for it to be practical."
+
+[node name="BarnacleJonesJr" parent="." instance=ExtResource("12_hk32d")]
+position = Vector2(-1304, 1880)
+startTheOtherWay = 1
