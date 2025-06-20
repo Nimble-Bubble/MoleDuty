@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://dra37acpbly2e"]
+[gd_scene load_steps=20 format=4 uid="uid://dra37acpbly2e"]
 
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="1_5ue0m"]
 [ext_resource type="Texture2D" uid="uid://cl0ps872abv7u" path="res://Graphics/Backgrounds/TWCaveBG1.png" id="2_q0j24"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://b3oqpav8754xy" path="res://Objects/Dynamic/MovableBoat.tscn" id="10_bldy5"]
 [ext_resource type="Script" uid="uid://bwe3n6id8pelw" path="res://Areas/TurbulentWhisper/WaterArea1.gd" id="11_h4mhq"]
 [ext_resource type="PackedScene" uid="uid://s4lilj7o5afg" path="res://Characters/Machines/BarnacleJonesJr.tscn" id="12_hk32d"]
+[ext_resource type="Texture2D" uid="uid://b47lbsb8rmgjg" path="res://Characters/OtherNPCs/TestSign.png" id="13_52bd2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jg6xp"]
 size = Vector2(79, 52)
@@ -345,3 +346,20 @@ Of course, you still have to rotate the boat for it to be practical."
 [node name="BarnacleJonesJr" parent="." instance=ExtResource("12_hk32d")]
 position = Vector2(-1304, 1880)
 startTheOtherWay = 1
+
+[node name="Label" type="Label" parent="BarnacleJonesJr"]
+offset_left = 2008.0
+offset_top = -2224.0
+offset_right = 2600.0
+offset_bottom = -2097.0
+text = "\"This is a long-abandoned settlement.
+That store behind me used to sell accessories,
+but most of them have been taken or damaged.
+If you can find a way over the gap, 
+maybe there's something still left there...\""
+horizontal_alignment = 1
+
+[node name="TestSign" type="Sprite2D" parent="."]
+position = Vector2(2760, 2704)
+texture = ExtResource("13_52bd2")
+hframes = 2
