@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ecst3tdk2xjk"]
+
+[ext_resource type="TileSet" uid="uid://1l4qioafkrl3" path="res://Terrain/Tilesets/TurbulentWhisperTileset.tres" id="1_tgn1b"]
+
+[node name="DH_PillarRun" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = ExtResource("1_tgn1b")
