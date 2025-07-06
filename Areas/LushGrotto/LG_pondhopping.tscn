@@ -1,13 +1,37 @@
-[gd_scene load_steps=4 format=4 uid="uid://b4l6vuagpvnn"]
+[gd_scene load_steps=8 format=4 uid="uid://b4l6vuagpvnn"]
 
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="1_omy2h"]
 [ext_resource type="Texture2D" uid="uid://cl0ps872abv7u" path="res://Graphics/Backgrounds/TWCaveBG1.png" id="2_1iy7y"]
 [ext_resource type="TileSet" uid="uid://bbeb2drxaemiu" path="res://Terrain/Tilesets/TestTileset2.tres" id="3_x6b8b"]
+[ext_resource type="Texture2D" uid="uid://b47lbsb8rmgjg" path="res://Characters/OtherNPCs/TestSign.png" id="4_1iy7y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6b8b"]
+atlas = ExtResource("4_1iy7y")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lffat"]
+atlas = ExtResource("4_1iy7y")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yvq0b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6b8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lffat")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="LG_pondhopping" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_omy2h")]
 position = Vector2(432, 1481)
+canDash = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 modulate = Color(0, 0.966667, 1, 1)
@@ -28,3 +52,34 @@ offset_top = -1048.0
 offset_right = 4304.0
 offset_bottom = 2584.0
 color = Color(0, 0.0627451, 0.0666667, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(477, 64)
+sprite_frames = SubResource("SpriteFrames_yvq0b")
+frame_progress = 0.570899
+
+[node name="Label" type="Label" parent="AnimatedSprite2D"]
+offset_left = -203.0
+offset_top = -187.0
+offset_right = 386.0
+offset_bottom = -86.0
+text = "This sort of serves as a test of dash-jumping.
+There are some parts of other early areas where you need to dash jump too,
+but this one is meant to feel more important.
+Dash and then quickly jump to get a longer jump."
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(3212, 32)
+sprite_frames = SubResource("SpriteFrames_yvq0b")
+frame_progress = 0.570899
+
+[node name="Label" type="Label" parent="AnimatedSprite2D2"]
+offset_left = -209.0
+offset_top = -199.0
+offset_right = 380.0
+offset_bottom = -98.0
+text = "There's supposed to be something here, but I haven't thought of it yet.
+Maybe a Vital Core, magic-related item, or accessory?
+Good jump on the dash jumps, though. Probably."
+metadata/_edit_use_anchors_ = true
