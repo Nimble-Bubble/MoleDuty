@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://cl0ygj7hayy7e" path="res://Areas/MiScellanea/gotomstesttw.gd" id="7_wciii"]
 [ext_resource type="AudioStream" uid="uid://bjn82y2pp71fa" path="res://Sounds/Environment/synthyteleport.wav" id="8_2ake3"]
 [ext_resource type="TileSet" uid="uid://bbeb2drxaemiu" path="res://Terrain/Tilesets/TestTileset2.tres" id="8_ux50n"]
-[ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="9_eoopv"]
+[ext_resource type="PackedScene" uid="uid://70v34lvxbyvo" path="res://Characters/Playable/Hop/Hop.tscn" id="10_c13yo"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -191,10 +191,7 @@ You may know what to do when the time comes.
 The northern district is all fog from here.
 All fog but one light."
 
-[node name="Node" type="Node" parent="."]
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("9_eoopv")]
-slide_on_ceiling = false
+[node name="Hop" parent="." instance=ExtResource("10_c13yo")]
 
 [connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]
 [connection signal="pressed" from="Button3" to="Button3" method="_on_button_pressed"]
