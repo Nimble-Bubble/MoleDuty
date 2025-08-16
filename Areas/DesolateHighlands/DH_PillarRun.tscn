@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://ecst3tdk2xjk"]
+[gd_scene load_steps=4 format=4 uid="uid://ecst3tdk2xjk"]
 
 [ext_resource type="TileSet" uid="uid://1l4qioafkrl3" path="res://Terrain/Tilesets/TurbulentWhisperTileset.tres" id="1_tgn1b"]
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="2_2l5ns"]
-[ext_resource type="Texture2D" uid="uid://cy5xmcfona5hg" path="res://Objects/Dynamic/1x1TorchWoodA.png" id="3_g82mt"]
-[ext_resource type="Texture2D" uid="uid://deu45ofmbksu2" path="res://Assets/Lights/RadialGradientLight1.png" id="4_qiuyd"]
+[ext_resource type="PackedScene" uid="uid://bf2hm1m2av5of" path="res://Objects/Dynamic/1x1TorchWoodA.tscn" id="3_yox7l"]
 
 [node name="DH_PillarRun" type="Node2D"]
 
@@ -31,55 +30,13 @@ offset_bottom = -33.0
 text = "This map, \"Pillar Run\", consists of several columns to be platformed between.
 You have several routes to take. Just don't fall to the bottom."
 
-[node name="1x1TorchWoodA" type="Sprite2D" parent="."]
-modulate = Color(0.655723, 0.630003, 0.620463, 1)
-self_modulate = Color(0.91032, 0.759316, 0.726254, 1)
-position = Vector2(40, 24)
-texture = ExtResource("3_g82mt")
-
-[node name="PointLight2D" type="PointLight2D" parent="1x1TorchWoodA"]
-position = Vector2(0, -4)
-color = Color(0.866638, 0.766267, 0.7006, 1)
-texture = ExtResource("4_qiuyd")
-texture_scale = 0.1
-
-[node name="1x1TorchWoodA4" type="Sprite2D" parent="."]
-modulate = Color(0.655723, 0.630003, 0.620463, 1)
-self_modulate = Color(0.91032, 0.759316, 0.726254, 1)
-position = Vector2(1208, 128)
-texture = ExtResource("3_g82mt")
-
-[node name="PointLight2D" type="PointLight2D" parent="1x1TorchWoodA4"]
-position = Vector2(0, -4)
-color = Color(0.866638, 0.766267, 0.7006, 1)
-texture = ExtResource("4_qiuyd")
-texture_scale = 0.1
-
-[node name="1x1TorchWoodA3" type="Sprite2D" parent="."]
-modulate = Color(0.655723, 0.630003, 0.620463, 1)
-self_modulate = Color(0.91032, 0.759316, 0.726254, 1)
-position = Vector2(960, 34)
-texture = ExtResource("3_g82mt")
-flip_h = true
-
-[node name="PointLight2D" type="PointLight2D" parent="1x1TorchWoodA3"]
-position = Vector2(0, -4)
-color = Color(0.866638, 0.766267, 0.7006, 1)
-texture = ExtResource("4_qiuyd")
-texture_scale = 0.1
-
-[node name="1x1TorchWoodA2" type="Sprite2D" parent="."]
-modulate = Color(0.655723, 0.630003, 0.620463, 1)
-self_modulate = Color(0.91032, 0.759316, 0.726254, 1)
+[node name="1x1TorchWoodA5" parent="." instance=ExtResource("3_yox7l")]
+z_index = -1
 position = Vector2(-200, 24)
-texture = ExtResource("3_g82mt")
 flip_h = true
 
-[node name="PointLight2D" type="PointLight2D" parent="1x1TorchWoodA2"]
-position = Vector2(0, -4)
-color = Color(0.866638, 0.766267, 0.7006, 1)
-texture = ExtResource("4_qiuyd")
-texture_scale = 0.1
+[node name="1x1TorchWoodA2" parent="." instance=ExtResource("3_yox7l")]
+position = Vector2(40, 24)
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 1080.0
@@ -87,3 +44,10 @@ offset_top = 8.0
 offset_right = 1337.0
 offset_bottom = 31.0
 text = "These torches will have fire soon."
+
+[node name="1x1TorchWoodA" parent="." instance=ExtResource("3_yox7l")]
+position = Vector2(1208, 128)
+
+[node name="1x1TorchWoodA4" parent="." instance=ExtResource("3_yox7l")]
+position = Vector2(960, 34)
+flip_h = true
