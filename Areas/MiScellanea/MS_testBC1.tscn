@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://1ey6r674w30"]
+[gd_scene load_steps=8 format=4 uid="uid://1ey6r674w30"]
 
 [ext_resource type="TileSet" uid="uid://bbeb2drxaemiu" path="res://Terrain/Tilesets/TestTileset2.tres" id="1_i78r6"]
 [ext_resource type="Texture2D" uid="uid://xlkql00jqqwh" path="res://Objects/Static/HeadlessExileStatue.png" id="3_v4jbw"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dq6ttq10s46hw" path="res://Graphics/DropCommandInstruction.png" id="5_m7g1k"]
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="6_3rsbp"]
 [ext_resource type="PackedScene" uid="uid://s4lilj7o5afg" path="res://Characters/Machines/BarnacleJonesJr.tscn" id="6_cvlmw"]
+[ext_resource type="PackedScene" uid="uid://bf2hm1m2av5of" path="res://Objects/Dynamic/1x1TorchWoodA.tscn" id="7_b64jq"]
 
 [node name="MsTestBc1" type="Node2D"]
 
@@ -212,3 +213,47 @@ offset_bottom = -948.679
 text = "This is meant to be a bit tougher, with more enemies.
 Doors will open at the top of the room when
 some of the enemies are defeated."
+
+[node name="1x1TorchWoodA" parent="." instance=ExtResource("7_b64jq")]
+z_index = -1
+position = Vector2(0, -136)
+
+[node name="1x1TorchWoodA2" parent="." instance=ExtResource("7_b64jq")]
+z_index = -1
+position = Vector2(-552, -152)
+
+[node name="1x1TorchWoodA3" parent="." instance=ExtResource("7_b64jq")]
+z_index = -1
+position = Vector2(552, -136)
+
+[node name="1x1TorchWoodA4" parent="." instance=ExtResource("7_b64jq")]
+z_index = -1
+position = Vector2(1720, -824)
+
+[node name="1x1TorchWoodA5" parent="." instance=ExtResource("7_b64jq")]
+z_index = -1
+position = Vector2(1400, -1096)
+
+[node name="1x1TorchWoodA6" parent="." instance=ExtResource("7_b64jq")]
+z_index = -1
+position = Vector2(2208, -176)
+
+[node name="1x1TorchWoodA7" parent="." instance=ExtResource("7_b64jq")]
+z_index = -1
+position = Vector2(1640, 40)
+
+[node name="1x1TorchWoodA8" parent="." instance=ExtResource("7_b64jq")]
+z_index = -1
+position = Vector2(96, -1136)
+
+[node name="1x1TorchWoodA9" parent="." instance=ExtResource("7_b64jq")]
+z_index = -1
+position = Vector2(744, -1104)
+
+[node name="1x1TorchWoodA10" parent="." instance=ExtResource("7_b64jq")]
+z_index = -1
+position = Vector2(-696, -1528)
+
+[node name="1x1TorchWoodA11" parent="." instance=ExtResource("7_b64jq")]
+z_index = -1
+position = Vector2(-24, -1760)
