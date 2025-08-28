@@ -6,6 +6,13 @@
 
 [node name="SH_automatedmasher" type="Node2D"]
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 162.0
+offset_top = -248.0
+offset_right = 747.0
+offset_bottom = -225.0
+text = "You'll most likely have the wall-climb ability by the time you reach this area."
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_fynq6")]
 position = Vector2(-72, 15)
 canDash = 1
@@ -17,13 +24,6 @@ modulate = Color(0.471554, 0.598674, 0.908094, 1)
 self_modulate = Color(0.0575113, 0.25894, 0.827585, 1)
 z_index = -10
 texture = ExtResource("2_gvuw3")
-
-[node name="Label" type="Label" parent="CharacterBody2D"]
-offset_left = 234.0
-offset_top = -263.0
-offset_right = 819.0
-offset_bottom = -240.0
-text = "You'll most likely have the wall-climb ability by the time you reach this area."
 
 [node name="MetalParts" type="TileMapLayer" parent="."]
 z_index = -1
