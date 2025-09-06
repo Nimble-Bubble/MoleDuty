@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://deu45ofmbksu2" path="res://Assets/Lights/RadialGradientLight1.png" id="2_spuub"]
 
 [node name="1x1TorchWoodA" type="Sprite2D"]
-modulate = Color(0.655723, 0.630003, 0.620463, 1)
+modulate = Color(0.843995, 0.829178, 0.823696, 1)
 self_modulate = Color(0.91032, 0.759316, 0.726254, 1)
 texture = ExtResource("1_hoeop")
 
