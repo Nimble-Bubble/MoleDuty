@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk13rrfwjy3m2"]
+
+[ext_resource type="Texture2D" uid="uid://blm6fju0smyy5" path="res://Objects/Dynamic/2x1LightSuspended.png" id="1_irvll"]
+[ext_resource type="Texture2D" uid="uid://deu45ofmbksu2" path="res://Assets/Lights/RadialGradientLight1.png" id="2_0oien"]
+
+[node name="2x1LightSuspendedRed" type="Node2D"]
+
+[node name="2x1LightSuspended" type="Sprite2D" parent="."]
+modulate = Color(0.501407, 0.501406, 0.501406, 1)
+z_index = -1
+texture = ExtResource("1_irvll")
+vframes = 8
+frame = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 16)
+color = Color(1, 0.5, 0.625, 1)
+shadow_enabled = true
+texture = ExtResource("2_0oien")
