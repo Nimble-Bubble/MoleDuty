@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://jhu2bn2581yg"]
+[gd_scene load_steps=6 format=4 uid="uid://jhu2bn2581yg"]
 
 [ext_resource type="TileSet" uid="uid://bbeb2drxaemiu" path="res://Terrain/Tilesets/TestTileset2.tres" id="1_drd0x"]
 [ext_resource type="AudioStream" uid="uid://unha4fxpci8s" path="res://Music/OldHomev1plusreverb.mp3" id="2_mifgc"]
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="3_1ydw1"]
 [ext_resource type="PackedScene" uid="uid://bf2hm1m2av5of" path="res://Objects/Dynamic/1x1TorchWoodA.tscn" id="4_mifgc"]
+[ext_resource type="Texture2D" uid="uid://duu34d67eysel" path="res://Graphics/TurbulentWhisperWarpButton.png" id="5_1ydw1"]
 
 [node name="BC_combstower" type="Node2D"]
 
@@ -34,4 +35,24 @@ tile_set = ExtResource("1_drd0x")
 collision_enabled = false
 
 [node name="1x1TorchWoodA" parent="." instance=ExtResource("4_mifgc")]
-position = Vector2(-8, 96)
+position = Vector2(-16, 80)
+
+[node name="1x1TorchWoodA2" parent="." instance=ExtResource("4_mifgc")]
+position = Vector2(208, -192)
+
+[node name="TurbulentWhisperWarpButton" type="Sprite2D" parent="."]
+position = Vector2(28, -184)
+scale = Vector2(0.5, 0.388889)
+texture = ExtResource("5_1ydw1")
+
+[node name="TurbulentWhisperWarpButton2" type="Sprite2D" parent="."]
+position = Vector2(96, -744)
+scale = Vector2(0.666667, 0.444444)
+texture = ExtResource("5_1ydw1")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -56.0
+offset_top = -912.0
+offset_right = 248.0
+offset_bottom = -889.0
+text = "There are supposed to be screens here."
