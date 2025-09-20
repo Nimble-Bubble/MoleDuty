@@ -15,10 +15,13 @@ class_name Exile
 @export var canSlam = 0;
 @export var canAirJump = 0;
 @export var hasLight = 0;
+@export var enterVelocityX = 0;
+@export var enterVelocityY = 0;
 static var inLiquid = 0;
 
 func _init():
-	velocity.y = 10;
+	velocity.x = enterVelocityX;
+	velocity.y = enterVelocityY;
 	#canDash = 0;
 func _physics_process(delta):
 	var _vel = Vector2()

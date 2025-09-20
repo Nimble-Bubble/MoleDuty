@@ -13,7 +13,7 @@ config_version=5
 config/name="Mole Duty"
 config/description="A game. For people."
 run/main_scene="res://nameofthegame.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.png"
 
 [display]

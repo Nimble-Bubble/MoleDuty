@@ -20,7 +20,8 @@ occlusion_enabled = false
 collision_enabled = false
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_2l5ns")]
-position = Vector2(-176, 80)
+position = Vector2(-80, 72)
+enterVelocityY = 250
 
 [node name="Label" type="Label" parent="."]
 offset_left = -144.0
