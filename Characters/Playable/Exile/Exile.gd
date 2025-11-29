@@ -158,7 +158,10 @@ func _physics_process(delta):
 		else:
 			jumpsLeft = 0 + bonusJumps;
 		
-	
+	if Input.is_action_just_pressed("p1attack") and Input.is_action_pressed("p1down"):
+		velocity.y = -500;
+	if Input.is_action_just_pressed("p1block") and Input.is_action_pressed("p1down"):
+		velocity.y = 2500;
 	if Input.is_action_just_pressed("p1down"):
 		position.y += 1
 	if Input.is_action_just_pressed("p1jump") and jumpsLeft > 0:
