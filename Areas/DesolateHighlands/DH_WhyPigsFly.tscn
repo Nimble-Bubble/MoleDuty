@@ -25,6 +25,16 @@ text = "This is a tavern where an obligatory bar fight breaks out.
 It's called \"Why Pigs Fly\" because it's used by anthro suines and I've been to a bakery/restaurant called When Pigs Fly.
 If I can figure out keeping smaller areas with bigger areas, this scene might include the town the bar is in too."
 
+[node name="Label" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 545.99994
+offset_right = 885.0
+offset_bottom = 620.99994
+text = "There might be a \"Living Relic\" NPC here.
+Living Relic is a character from my old Terraria mod.
+They might be reinterpreted as a Toure?"
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_nc5qx")]
 canDash = 1
 
