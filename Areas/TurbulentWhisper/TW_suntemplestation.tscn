@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=4 uid="uid://dhkxryfpvdtp7"]
+
+[ext_resource type="Texture2D" uid="uid://cl0ps872abv7u" path="res://Graphics/Backgrounds/TWCaveBG1.png" id="1_6367l"]
+[ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="2_t17nj"]
+[ext_resource type="TileSet" uid="uid://1l4qioafkrl3" path="res://Terrain/Tilesets/TurbulentWhisperTileset.tres" id="3_25ot3"]
+
+[node name="TwSuntemplestation" type="Node2D"]
+
+[node name="TwCaveBg1" type="Sprite2D" parent="."]
+position = Vector2(251, 374)
+texture = ExtResource("1_6367l")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_t17nj")]
+position = Vector2(212, 387)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 538.90283
+offset_top = -790.00116
+offset_right = 578.90283
+offset_bottom = -767.00116
+text = "The exit up to the canyon is somewhere in the upper parts of this map."
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAACQA0AcHAAMAAAABACQA0AcHAAMAAAACACQA0AcHAAMAAAADACQA0AcHAAMAAAAEACQA0AcHAAMAAAAFACQA0AcHAAMAAAAGACQA0AcHAAMAAAAHACQA0AcHAAMAAAAIACQA0AcHAAMAAAAJACQA0AcHAAMAAAAKACQA0AcHAAMAAAALACQA0AcHAAMAAAAMACQA0AcHAAMAAAANACQA0AcHAAMAAAAOACQA0AcHAAMAAAAPACQA0AcHAAMAAAAQACQA0AcHAAMAAAARACQA0AcHAAMAAAASACQA0AcHAAMAAAATACQA0AcHAAMAAAAUACQA0AcHAAMAAAAVACQA0AcHAAMAAAAWACQA0AcHAAMAAAAXACQA0AcHAAMAAAAYACQA0AcHAAMAAAAZACQA0AcHAAMAAAAaACQA0AcHAAMAAAAbACQA0AcHAAMAAAAcACQA0AcHAAMAAAAdACQA0AcHAAMAAAAeACQA0AcHAAMAAAAfACQA0AcHAAMAAAAgACQA0AcHAAMAAAA=")
+tile_set = ExtResource("3_25ot3")
+
+[node name="Label" type="Label" parent="TileMapLayer"]
+offset_left = 35.0
+offset_top = 458.0
+offset_right = 497.0
+offset_bottom = 481.0
+text = "I think this map might be locked behind dash or something?"
