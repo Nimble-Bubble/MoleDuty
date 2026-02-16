@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://calqj86yweol4"]
+[gd_resource type="TileSet" format=3 uid="uid://calqj86yweol4"]
 
 [ext_resource type="Texture2D" uid="uid://bknn40hluhv6x" path="res://Terrain/Tilesets/testtileset.png" id="1_1sjl3"]
 [ext_resource type="Texture2D" uid="uid://d3rnluxudm57l" path="res://Terrain/Tilesets/SeaTowerTileset.png" id="2_mycnx"]
