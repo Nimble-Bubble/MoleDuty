@@ -47,10 +47,18 @@ Originally, the plan was to have a cave opening over here,
 but I decided to go for more of a gate instead."
 
 [node name="Label2" type="Label" parent="." unique_id=478704839]
-offset_left = -2125.927
-offset_top = -45.148438
-offset_right = -2085.927
-offset_bottom = -22.148438
+offset_left = -3344.0
+offset_top = -480.0
+offset_right = -2745.0
+offset_bottom = -405.0
 text = "You assumedly have to get a Lance from the cave area to open the right door.
 You can make it in through other methods, though.
 Observe employee schedules."
+
+[node name="Label3" type="Label" parent="." unique_id=713242567]
+offset_left = -1838.6311
+offset_top = 37.643677
+offset_right = -1798.6311
+offset_bottom = 60.643677
+text = "There are watchtowers throughout the desert.
+A few of them are manned."
