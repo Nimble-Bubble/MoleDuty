@@ -36,3 +36,15 @@ offset_top = -232.0
 offset_right = 53.0
 offset_bottom = -209.0
 text = "You have to ascend this tree to get to the town."
+
+[node name="Label2" type="Label" parent="." unique_id=867323810]
+offset_left = -505.45056
+offset_top = -3556.2568
+offset_right = -465.45056
+offset_bottom = -3533.2568
+text = "This town built on a tree was inspired by a similar town populated by anthro birds from the Pocket God comic.
+They weren't a big inspiration in the creation of Toures 
+(I was inspired to make them because someone thought of the \"scavengers\" from Wings of Fire as birds,
+and they're heavily inspired by the Patapon series' characters)
+If you want to read the comic, it's been archived on Webtoon by at least one of the people who worked on it.
+Some days, I really wish I could still play the Facebook version."
