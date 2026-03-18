@@ -62,3 +62,12 @@ offset_right = -1542.0
 offset_bottom = -629.3563
 text = "There are watchtowers throughout the desert.
 A few of them are manned."
+
+[node name="Label4" type="Label" parent="." unique_id=1165936184]
+offset_left = -5393.3257
+offset_top = -728.18134
+offset_right = -5353.3257
+offset_bottom = -705.18134
+text = "I think there's a lifting puzzle somewhere around here.
+As stated elsewhere, observe employee schedules
+and maybe you can access some parts of the tower."
