@@ -1,0 +1,14 @@
+[gd_scene format=4 uid="uid://2de34w5fadws"]
+
+[ext_resource type="TileSet" uid="uid://bbeb2drxaemiu" path="res://Terrain/Tilesets/TestTileset2.tres" id="1_27vkd"]
+[ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="2_0px38"]
+
+[node name="AbSpinUp" type="Node2D" unique_id=1224585601]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1082530420]
+modulate = Color(0.08218927, 0.1638282, 0.19958386, 1)
+tile_map_data = PackedByteArray("AAD+/wEAAQABAAAAAAD//wEAAQABAAAAAAAAAAEAAQABAAAAAAABAAEAAQABAAAAAAD6/wEAAQABAAAAAAD5/wEAAQABAAAAAAD5/wAAAQABAAAAAAD5////AQABAAAAAAD5//7/AQABAAAAAAD5//3/AQABAAAAAAACAAEAAQABAAAAAAADAAEAAQABAAAAAAAEAAEAAQABAAAAAAAFAAEAAQABAAAAAAAGAAEAAQABAAAAAAAGAAAAAQABAAAAAAAGAP//AQABAAAAAAAGAP7/AQABAAAAAAAGAP3/AQABAAAAAAD5//z/AQABAAAAAAD6//z/AQABAAAAAAD7//z/AQABAAAAAAD8//z/AQABAAAAAAD9//z/AQABAAAAAAD+//z/AQABAAAAAAD///z/AQABAAAAAAAAAPz/AQABAAAAAAABAPz/AQABAAAAAAACAPz/AQABAAAAAAAGAPz/AQABAAAAAAD9/wEAAQAGAAMAAAD8/wEAAQAGAAMAAAD7/wEAAQAGAAMAAAADAPz/AQAGAAMAAAAEAPz/AQAGAAMAAAAFAPz/AQAGAAMAAAA=")
+tile_set = ExtResource("1_27vkd")
+
+[node name="CharacterBody2D" parent="." unique_id=2095568407 instance=ExtResource("2_0px38")]
+position = Vector2(1, -3)
