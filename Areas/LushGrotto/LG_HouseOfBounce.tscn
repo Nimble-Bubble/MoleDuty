@@ -1,0 +1,21 @@
+[gd_scene format=4 uid="uid://djhpeu0xgpino"]
+
+[ext_resource type="TileSet" uid="uid://bbeb2drxaemiu" path="res://Terrain/Tilesets/TestTileset2.tres" id="1_sxwak"]
+[ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="2_helki"]
+
+[node name="LG_HouseOfBounce" type="Node2D" unique_id=497122449]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1511959563]
+tile_map_data = PackedByteArray("AAD9/wIAAQABAAAAAAD+/wIAAQABAAAAAAD//wIAAQABAAAAAAAAAAIAAQABAAAAAAABAAIAAQABAAAAAAACAAIAAQABAAAAAAD8/wIAAQABAAAAAAD7/wIAAQABAAAAAAADAAIAAQABAAAAAAAEAAIAAQABAAAAAAA=")
+tile_set = ExtResource("1_sxwak")
+
+[node name="Label" type="Label" parent="." unique_id=1629776854]
+offset_left = -311.0
+offset_top = -240.0
+offset_right = 511.0
+offset_bottom = -191.0
+text = "This map will take advantage of bouncy level elements, like mushrooms.
+I want to have a house or some other residential spot in there too, to make the level title a bit more literal."
+
+[node name="CharacterBody2D" parent="." unique_id=1235285270 instance=ExtResource("2_helki")]
+position = Vector2(-2, -5)
