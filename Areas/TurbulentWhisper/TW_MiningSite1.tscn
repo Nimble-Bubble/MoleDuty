@@ -31,3 +31,14 @@ tile_set = ExtResource("1_lo07s")
 
 [node name="CharacterBody2D" parent="." unique_id=71710040 instance=ExtResource("2_vghpl")]
 position = Vector2(113, -93)
+
+[node name="Label" type="Label" parent="." unique_id=231614358]
+offset_left = -682.0
+offset_top = 45.0
+offset_right = -53.0
+offset_bottom = 146.0
+text = "There are meant to be two ways to get from Sun Temple from here:
+An entrance to Moisture Pits lower down
+and an entrance to Sun Temple Station higher up
+The second entrance should require some ability, but I'm not sure which one yet. 
+Maybe the dash?"

@@ -20,3 +20,11 @@ text = "This part is based on a screenshot of a scrapped area
 from the Calamity Mod, one of the most known mods for Terraria.
 The area would have been a sky temple, which is close to what
 some parts of the \"Old Laputa\" area are."
+
+[node name="Label2" type="Label" parent="." unique_id=1530700358]
+offset_left = 372.26318
+offset_top = -616.5875
+offset_right = 412.26318
+offset_bottom = -593.5875
+text = "I still haven't made water a proper thing yet.
+And I need to make a lot of tilesets."
