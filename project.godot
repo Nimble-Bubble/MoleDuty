@@ -33,6 +33,12 @@ window/vsync/vsync_mode=2
 Water="Typical harmless liquid."
 Player="Playable characters."
 
+[gui]
+
+theme/default_font_antialiasing=0
+theme/default_font_subpixel_positioning=0
+theme/custom_font="uid://6omo2h8tqcui"
+
 [importer_defaults]
 
 animation_library={
