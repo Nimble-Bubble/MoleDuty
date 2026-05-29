@@ -10,6 +10,7 @@ tile_map_data = PackedByteArray("AAD5/wIAAQABAAAAAAD6/wIAAQABAAAAAAD7/wIAAQABAAA
 tile_set = ExtResource("1_13uku")
 
 [node name="CharacterBody2D" parent="." unique_id=1737093213 instance=ExtResource("2_80j7o")]
+position = Vector2(0, -16)
 
 [node name="Label" type="Label" parent="." unique_id=451017678]
 offset_left = -189.0
@@ -18,3 +19,34 @@ offset_right = 190.0
 offset_bottom = -107.0
 text = "This area should seem suspiciously large; enough for a boss fight.
 Because there will be one here if you do both routes."
+
+[node name="Label2" type="Label" parent="." unique_id=1932909662]
+offset_left = -1440.0
+offset_top = -79.0
+offset_right = -1033.0
+offset_bottom = -42.0
+text = "To the left of the suspicious bridge area is a two-way split
+with a lever that you use to go into one "
+
+[node name="Label3" type="Label" parent="." unique_id=955493824]
+offset_left = 1089.6914
+offset_top = -22.83136
+offset_right = 1129.6914
+offset_bottom = -5.83136
+text = "There may be a circular room with a spinning wheel
+on the right side of the map
+or the map connected here"
+
+[node name="Label4" type="Label" parent="." unique_id=1022381943]
+offset_left = -1369.0
+offset_top = 343.0
+offset_right = -1128.0
+offset_bottom = 360.0
+text = "The lower route has low-friction ice tiles"
+
+[node name="Label5" type="Label" parent="." unique_id=470404083]
+offset_left = -1277.9535
+offset_top = -595.4796
+offset_right = -1237.9535
+offset_bottom = -578.4796
+text = "The upper route has steam."
