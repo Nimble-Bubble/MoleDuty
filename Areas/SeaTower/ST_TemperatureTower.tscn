@@ -49,3 +49,11 @@ offset_top = -595.4796
 offset_right = -1237.9535
 offset_bottom = -578.4796
 text = "The upper route has steam."
+
+[node name="Label6" type="Label" parent="." unique_id=1832250889]
+offset_left = -175.0
+offset_top = -973.0
+offset_right = 147.0
+offset_bottom = -956.0
+text = "Once you beat the boss, this part at the top opens up.
+There's a secret if you can somehow get to the top of the tower."
