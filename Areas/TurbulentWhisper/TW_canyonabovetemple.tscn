@@ -63,3 +63,20 @@ offset_right = 1122.0
 offset_bottom = 712.0
 text = "You can make this jump from the right edge. 
 Seems close to the limit to a normal jump, may keep in mind for elsewhere."
+
+[node name="Label7" type="Label" parent="." unique_id=878362460]
+offset_left = -65.0
+offset_top = -575.0
+offset_right = -25.0
+offset_bottom = -558.0
+text = "Maybe you should be able to see the top from a bit lower down? 
+I want it to be clear that this canyon can get pretty deep"
+
+[node name="Label8" type="Label" parent="." unique_id=1124577105]
+offset_left = -2336.0938
+offset_top = 75.755615
+offset_right = -2296.0938
+offset_bottom = 92.755615
+text = "Some parts will be easier or only possible to access
+once the dam has broken and the water has risen.
+There shouldn't be any stuff that will be inaccessible once that happens?"
