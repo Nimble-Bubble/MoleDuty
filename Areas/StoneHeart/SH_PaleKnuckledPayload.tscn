@@ -23,9 +23,17 @@ canDash = 1
 canClimb = 1
 
 [node name="Label2" type="Label" parent="." unique_id=77896858]
-offset_left = -120.9422
-offset_top = -3103.7986
-offset_right = -80.9422
-offset_bottom = -3086.7986
-text = "This area is vaguely inspired by White Knuckle.
+offset_left = -140.0
+offset_top = -3169.0
+offset_right = 127.0
+offset_bottom = -3132.0
+text = "As in my Half-Life mod,
+this area is vaguely inspired by White Knuckle.
 I haven't played it as of writing."
+
+[node name="Label3" type="Label" parent="." unique_id=1072972870]
+offset_left = -936.0
+offset_top = -3050.0
+offset_right = -623.0
+offset_bottom = -3033.0
+text = "After the White Knuckle part comes the payload part."
