@@ -2,6 +2,46 @@
 
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="1_tjy0o"]
 [ext_resource type="TileSet" uid="uid://1l4qioafkrl3" path="res://Terrain/Tilesets/TurbulentWhisperTileset.tres" id="2_tjy0o"]
+[ext_resource type="Texture2D" uid="uid://fsqk2j0dsaej" path="res://Terrain/Tilesets/ProcellTileset.png" id="3_rvp0p"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5gx6a"]
+texture = ExtResource("3_rvp0p")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_g4v7s"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_5gx6a")
 
 [node name="OL_TwentyTwo" type="Node2D" unique_id=1999960504]
 
@@ -28,3 +68,7 @@ offset_right = 412.26318
 offset_bottom = -593.5875
 text = "I still haven't made water a proper thing yet.
 And I need to make a lot of tilesets."
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1657577701]
+tile_map_data = PackedByteArray("AAD+//H/AAADAAMAAAAHAAEAAAADAAMAAAAIAPf/AAADAAMAAADy/wIAAAADAAMAAAA=")
+tile_set = SubResource("TileSet_g4v7s")
