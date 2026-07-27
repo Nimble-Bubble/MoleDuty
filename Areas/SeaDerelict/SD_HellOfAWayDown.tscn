@@ -19,3 +19,13 @@ offset_bottom = 3562.0
 color = Color(0.8980193, 0, 0.36214092, 1)
 
 [node name="CharacterBody2D" parent="." unique_id=1270810480 instance=ExtResource("2_455jw")]
+
+[node name="Label" type="Label" parent="CharacterBody2D" unique_id=482962205]
+offset_left = 109.0
+offset_top = -169.0
+offset_right = 508.0
+offset_bottom = -92.0
+text = "Early on with the Derelict, I wanted to have an area
+with a red background and intense music.
+I don't have the music yet as of writing.
+Though the Derelict is much more \"abyss\" than \"fire and brimstone\""
