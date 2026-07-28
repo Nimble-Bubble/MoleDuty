@@ -16,7 +16,7 @@ offset_left = -1324.0
 offset_top = -1328.0
 offset_right = 3171.0
 offset_bottom = 3562.0
-color = Color(0.8980193, 0, 0.36214092, 1)
+color = Color(1, 0, 0.2666664, 1)
 
 [node name="CharacterBody2D" parent="." unique_id=1270810480 instance=ExtResource("2_455jw")]
 
