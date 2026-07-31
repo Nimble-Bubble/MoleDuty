@@ -242,9 +242,9 @@ func frame_selector2():
 	if velocity.y < 0 and !is_on_wall():
 		$AnimatedSprite2D.animation = "jump"
 		$AnimatedSprite2D.flip_v = false
-		if Input.is_action_pressed("p1left"):
+		if velocity.x < -1:
 			$AnimatedSprite2D.flip_h = true;
-		if Input.is_action_pressed("p1right"):
+		if velocity.x > 1:
 			$AnimatedSprite2D.flip_h = false;
 	if velocity.y > 17 and !is_on_wall():
 		$AnimatedSprite2D.animation = "fall"
