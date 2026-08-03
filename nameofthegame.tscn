@@ -1,8 +1,10 @@
-[gd_scene load_steps=33 format=4 uid="uid://r8sfya001e3w"]
+[gd_scene format=4 uid="uid://r8sfya001e3w"]
 
 [ext_resource type="FontFile" uid="uid://l2g73vjp614m" path="res://Assets/Fonts/NEUROPOL.ttf" id="1_50uks"]
 [ext_resource type="Texture2D" uid="uid://cxuowjgd1pm7d" path="res://Characters/Playable/Tester/testcharidle.png" id="2_5q2nx"]
+[ext_resource type="Texture2D" uid="uid://clm7120tkp1nc" path="res://Objects/Static/AllenTheThing.png" id="2_q0f2b"]
 [ext_resource type="Script" uid="uid://coechrblfo7nx" path="res://gotomstest.gd" id="3_3gx5h"]
+[ext_resource type="Script" uid="uid://baa6wfj3btare" path="res://gotofield.gd" id="3_qq42d"]
 [ext_resource type="Texture2D" uid="uid://cst83eb3wpieb" path="res://Graphics/TitleScreenPlaceholderBG.png" id="4_aqfmb"]
 
 [sub_resource type="Image" id="Image_klir0"]
@@ -253,6 +255,15 @@ data = PackedByteArray("AAEAAAASAQAABAAgTFRTSK+sW5EAAAYoAAABDE9TLzJr/zfOAAABqAAA
 font_name = "Neuropol"
 style_name = "Regular"
 msdf_pixel_range = 8
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 13.0
 cache/0/16/0/descent = 4.0
 cache/0/16/0/underline_position = 1.04688
@@ -6199,10 +6210,10 @@ cache/0/8/0/glyphs/268435530/size = Vector2(4, 7)
 cache/0/8/0/glyphs/268435530/uv_rect = Rect2(32, 27, 4, 7)
 cache/0/8/0/glyphs/268435530/texture_idx = 0
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=128670620]
 position = Vector2(64, 1)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=145557556]
 offset_top = 69.0
 offset_right = 1152.0
 offset_bottom = 301.0
@@ -6218,7 +6229,7 @@ Yes, this is the font from Astro Lounge (a.k.a Neuropol)
 [/b][/center]"
 metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel2" type="Label" parent="."]
+[node name="RichTextLabel2" type="Label" parent="." unique_id=1025568186]
 offset_top = 419.0
 offset_right = 1152.0
 offset_bottom = 465.0
@@ -6228,20 +6239,33 @@ text = "Press Enter or Start for Campaign
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="."]
-offset_left = 527.0
-offset_top = 519.0
-offset_right = 644.0
-offset_bottom = 559.0
+[node name="Button2" type="Button" parent="." unique_id=1932529080]
+offset_left = 528.0
+offset_top = 463.0
+offset_right = 645.0
+offset_bottom = 503.0
+action_mode = 0
+text = "New Game"
+icon = ExtResource("2_q0f2b")
+script = ExtResource("3_qq42d")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Button2" unique_id=630538950]
+position = Vector2(55, -187)
+
+[node name="Button" type="Button" parent="." unique_id=318059698]
+offset_left = 528.0
+offset_top = 559.0
+offset_right = 645.0
+offset_bottom = 599.0
 action_mode = 0
 text = "MS_test1"
 icon = ExtResource("2_5q2nx")
 script = ExtResource("3_3gx5h")
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="Button"]
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Button" unique_id=492586678]
 position = Vector2(55, -187)
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1123058774]
 anchors_preset = -1
 anchor_top = -5.06522
 anchor_bottom = -5.06522
@@ -6254,10 +6278,11 @@ text = "[center]Dialogue System by Nathan Hoad
 [/center]"
 metadata/_edit_use_anchors_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2005806867]
 z_index = -4
 position = Vector2(576, 359)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_aqfmb")
 
+[connection signal="pressed" from="Button2" to="Button2" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]
