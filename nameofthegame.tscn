@@ -6213,6 +6213,12 @@ cache/0/8/0/glyphs/268435530/texture_idx = 0
 [node name="Node2D" type="Node2D" unique_id=128670620]
 position = Vector2(64, 1)
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2005806867]
+z_index = -4
+position = Vector2(576, 359)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_aqfmb")
+
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=145557556]
 offset_top = 69.0
 offset_right = 1152.0
@@ -6277,12 +6283,6 @@ text = "[center]Dialogue System by Nathan Hoad
 2D Liquid Simulator by L-Marcel
 [/center]"
 metadata/_edit_use_anchors_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2005806867]
-z_index = -4
-position = Vector2(576, 359)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_aqfmb")
 
 [connection signal="pressed" from="Button2" to="Button2" method="_on_button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_button_pressed"]
