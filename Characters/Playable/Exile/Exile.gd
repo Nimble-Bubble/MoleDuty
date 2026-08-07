@@ -5,15 +5,21 @@ class_name Exile
 @onready var rid = get_rid()
 @export var defaultSpeed = 20 * (10 / 8);
 @export var defaultAcceleration = 10;
+#Can be modified for areas set in space or underwater
+@export var grav = 981;
 @export var jumpsLeft = 1;
 @export var bonusJumps = 0;
-@export var dashTimer = 200;
+#Set to 200 when getting dash item for first time?
+@export var dashTimer = 60;
+#Coyote jump
 @export var jumpTimer = 15;
+#Unlockable abilities
 @export var canDash = 0;
 @export var canClimb = 0;
 @export var canSlide = 0;
 @export var canSlam = 0;
 @export var canAirJump = 0;
+#Flashlight like Half-Life
 @export var hasLight = 0;
 @export var enterVelocityX = 0;
 @export var enterVelocityY = 0;
@@ -25,7 +31,6 @@ func _init():
 	#canDash = 0;
 func _physics_process(delta):
 	var _vel = Vector2()
-	var grav = 981
 	var direction = Input.get_axis("p1left", "p1right")
 	#This sets up the velocity text.
 	$VelXLabel.text = str(velocity.x)
@@ -93,8 +98,12 @@ func _physics_process(delta):
 		$FlashlightToggle.play();
 	#This is where the movement code begins.
 	if Input.is_action_pressed("p1left"):
+		if Input.is_action_pressed("p1down") and canSlide and is_on_floor():
+			velocity.x -= defaultSpeed * 1.5;
 		velocity.x -= defaultSpeed;
 	if Input.is_action_pressed("p1right"):
+		if Input.is_action_pressed("p1down") and canSlide and is_on_floor():
+			velocity.x += defaultSpeed * 1.5;
 		velocity.x += defaultSpeed;
 	if (velocity.x <= -300) or (velocity.x >= 300):
 		velocity.x /= 1.01;
