@@ -13,11 +13,12 @@ tile_map_data = PackedByteArray("AAAAAAAAAQABAAAAAAD//wAAAQABAAAAAADY/wAAAQABAAA
 tile_set = ExtResource("2_tb1lx")
 
 [node name="Label" type="Label" parent="." unique_id=1187643031]
-offset_left = -148.0
-offset_top = 34.0
-offset_right = 197.0
-offset_bottom = 111.0
+offset_left = -157.0
+offset_top = 24.0
+offset_right = 188.0
+offset_bottom = 121.0
 text = "Arena for last phase?
 Intentionally looks like an arena set up for a Terraria boss
 Because the guardian of the Derelict is a reference to
-worm bosses in Terraria mods"
+worm bosses in Terraria mods
+Should loop horizontally and vertically"
