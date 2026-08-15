@@ -42,5 +42,5 @@ text = "After the White Knuckle part comes the payload part."
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=199165141]
 self_modulate = Color(0, 0, 0, 1)
-tile_map_data = PackedByteArray("AAD8//v/0AcBAAcAAAD9//v/0AcBAAcAAAD+//v/0AcBAAoAAAD///v/0AcBAAoAAAAAAPv/0AcBAAoAAAABAPv/0AcBAAoAAAACAPv/0AcBAAoAAAADAPv/0AcBAAoAAAAEAPr/0AcAAAoAAAAFAPn/0AcAAAoAAAAGAPn/0AcBAAoAAAAHAPn/0AcBAAoAAAD5//X/0AcBAAoAAAD4//X/0AcBAAoAAAA=")
+tile_map_data = PackedByteArray("AAD8//v/0AcBAAcAAAD9//v/0AcBAAcAAAD+//v/0AcBAAoAAAD///v/0AcBAAoAAAAAAPv/0AcBAAoAAAD5//X/0AcBAAoAAAD4//X/0AcBAAoAAAABAPv/0AcBAAoAAAAFAPn/0AcBAAoAAAACAPr/0AcAAAoAAAADAPn/0AcAAAoAAAAEAPn/0AcBAAoAAAAGAPn/0AcBAAoAAAAHAPn/0AcBAAoAAAA=")
 tile_set = ExtResource("3_nh0mj")

@@ -192,7 +192,7 @@ func _physics_process(delta):
 		
 		if (velocity.y > 0 and !Input.is_action_pressed("p1down")):
 			velocity.y = 0;
-		velocity.y = -500;
+		velocity.y -= 500;
 		jumpsLeft -= 1;
 	var _motion = velocity * delta
 	move_and_slide();
