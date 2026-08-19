@@ -28,6 +28,7 @@ static var inLiquid = 0;
 func _init():
 	velocity.x = enterVelocityX;
 	velocity.y = enterVelocityY;
+	dashTimer = 0;
 	#canDash = 0;
 func _physics_process(delta):
 	var _vel = Vector2()
@@ -139,25 +140,12 @@ func _physics_process(delta):
 				#if velocity.y > 0:
 			else:
 				$Painsound.play();
-	#velocity.x *= 0.9;
-		#if is_on_floor() and !Input.is_action_pressed("p1left") and !Input.is_action_pressed("p1right"):
-			#velocity.x /= 1.01;
-		#else:
-			#velocity.x /= 1.005;
-	#if Input.is_action_just_pressed("p1dash") and canDash >= 1:
-		#if velocity.x < 0:
-			#velocity.x = -2000;
-		#else:
-			#velocity.x = 2000;
-		#$Dashsound.play();
-		#if velocity.y > 0:
-			#velocity.y = 0;
 	
 	if is_on_floor() and !Input.is_action_pressed("p1left") and !Input.is_action_pressed("p1right"):
 		if (dashTimer < 1 or dashTimer > 60):
 			velocity.x *= 0.5;
 		else:
-			velocity.x *= 0.95;
+			velocity.x *= 0.975;
 	if !is_on_floor():
 		velocity.x *= 0.95;
 		jumpTimer -= 1;
