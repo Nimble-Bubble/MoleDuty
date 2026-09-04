@@ -6236,6 +6236,7 @@ Yes, this is the font from Astro Lounge (a.k.a Neuropol)
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel2" type="Label" parent="." unique_id=1025568186]
+visible = false
 offset_top = 419.0
 offset_right = 1152.0
 offset_bottom = 465.0
