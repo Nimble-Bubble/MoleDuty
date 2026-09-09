@@ -1,0 +1,40 @@
+[gd_scene format=4 uid="uid://dq1okh8uqws2r"]
+
+[ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="1_gfkte"]
+[ext_resource type="Texture2D" uid="uid://dkb7870aqrufk" path="res://Characters/OtherNPCs/FoxShopkeeper/FSKIdle.png" id="2_fodoo"]
+[ext_resource type="TileSet" uid="uid://1l4qioafkrl3" path="res://Terrain/Tilesets/TurbulentWhisperTileset.tres" id="3_8x80a"]
+
+[node name="DH_ClimbBottom" type="Node2D" unique_id=583695449]
+
+[node name="CharacterBody2D" parent="." unique_id=1270810480 instance=ExtResource("1_gfkte")]
+position = Vector2(3, -41)
+
+[node name="FskIdle" type="Sprite2D" parent="." unique_id=1227725031]
+position = Vector2(169, -25)
+scale = Vector2(-1, 1)
+texture = ExtResource("2_fodoo")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1795606114]
+tile_map_data = PackedByteArray("AAALAAAA0AcHAAsAAAAKAAAA0AcHAAsAAAAJAAAA0AcHAAsAAAAIAAAA0AcHAAsAAAAHAAAA0AcHAAsAAAAGAAAA0AcHAAsAAAAFAAAA0AcHAAsAAAAEAAAA0AcHAAsAAAADAAAA0AcHAAsAAAACAAAA0AcHAAsAAAABAAAA0AcHAAsAAAAAAAAA0AcHAAsAAAD//wAA0AcHAAsAAAD+/wAA0AcHAAsAAAD9/wAA0AcHAAsAAAD8/wAA0AcHAAsAAAD7/wAA0AcHAAsAAAD6/wAA0AcHAAsAAAD5/wAA0AcHAAsAAAD4/wAA0AcHAAsAAAD3/wAA0AcHAAsAAAD2/wAA0AcHAAsAAAD1/wAA0AcHAAsAAAD0/wAA0AcHAAsAAADz/wAA0AcHAAsAAADy/wAA0AcHAAsAAADx/wAA0AcHAAsAAADw/wAA0AcHAAsAAADv/wAA0AcHAAsAAADu/wAA0AcHAAsAAADt/wAA0AcHAAsAAADs/wAA0AcHAAsAAADr/wAA0AcHAAsAAADq/wAA0AcHAAsAAADp/wAA0AcHAAsAAADo/wAA0AcHAAsAAADn/wAA0AcHAAsAAADm/wAA0AcHAAsAAADl/wAA0AcHAAsAAADk/wAA0AcHAAsAAADj/wAA0AcHAAsAAADi/wAA0AcHAAsAAADh/wAA0AcHAAsAAADg/wAA0AcHAAsAAADf/wAA0AcHAAsAAADe/wAA0AcHAAsAAADd/wAA0AcHAAsAAADc/wAA0AcHAAsAAADb/wAA0AcHAAsAAADa/wAA0AcHAAsAAADZ/wAA0AcHAAsAAADY/wAA0AcHAAsAAAAMAAAA0AcHAAsAAAANAAAA0AcHAAsAAAAOAAAA0AcHAAsAAAAPAAAA0AcHAAsAAAAQAAAA0AcHAAsAAAARAAAA0AcHAAsAAAASAAAA0AcHAAsAAAATAAAA0AcHAAsAAAAUAAAA0AcHAAsAAAAVAAAA0AcHAAsAAAAWAAAA0AcHAAsAAAAXAAAA0AcHAAsAAAAYAAAA0AcHAAsAAAAZAAAA0AcHAAsAAAAaAAAA0AcHAAsAAAAbAAAA0AcHAAsAAAAcAAAA0AcHAAsAAAAdAAAA0AcHAAsAAAAeAAAA0AcHAAsAAAAfAAAA0AcHAAsAAAAgAAAA0AcHAAsAAAAhAAAA0AcHAAsAAAAiAAAA0AcHAAsAAAAjAAAA0AcHAAsAAAAkAAAA0AcHAAsAAAAlAAAA0AcHAAsAAAAmAAAA0AcHAAsAAAAnAAAA0AcHAAsAAAA=")
+tile_set = ExtResource("3_8x80a")
+
+[node name="Label" type="Label" parent="." unique_id=1824898195]
+offset_left = -277.0
+offset_top = -257.0
+offset_right = 94.0
+offset_bottom = -160.0
+text = "I want the final stop before the Climb 
+(planned to mostly be one big map)
+to be a meeting between the player and V.
+For most of the first visit to Desolate Highlands,
+V's role as a general shopkeeper is taken by another character."
+
+[node name="Label2" type="Label" parent="." unique_id=566018000]
+offset_left = 108.0
+offset_top = -139.0
+offset_right = 591.0
+offset_bottom = -82.0
+text = "I want to make a reference to something specific here...
+Maybe put V in an outfit familiar to those who have heard of a tale of twin tails,
+and they shall ask \"Will you accept Ascension?\"
+It's a more physically-oriented kind of ascension, but it's still quite a process."
