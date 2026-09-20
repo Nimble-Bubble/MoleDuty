@@ -3,8 +3,16 @@
 [ext_resource type="Texture2D" uid="uid://dcxc7c6iprxq8" path="res://Graphics/Backgrounds/SLCaveBG2.png" id="1_8f1fd"]
 [ext_resource type="TileSet" uid="uid://bbeb2drxaemiu" path="res://Terrain/Tilesets/TestTileset2.tres" id="1_tclxr"]
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="2_8f1fd"]
+[ext_resource type="Texture2D" uid="uid://c6ct44vgn7dqt" path="res://Graphics/Backgrounds/SLCaveBG1.png" id="4_tcqjx"]
 
 [node name="LG_SH" type="Node2D" unique_id=1630163151]
+
+[node name="SlCaveBg1" type="Sprite2D" parent="." unique_id=1996185515]
+modulate = Color(1, 0.9333334, 0, 1)
+self_modulate = Color(1.224127, 1.224127, 0, 1)
+z_index = -5
+position = Vector2(-1992, 504)
+texture = ExtResource("4_tcqjx")
 
 [node name="SlCaveBg2" type="Sprite2D" parent="." unique_id=1341353850]
 self_modulate = Color(1, 0, 0.5, 1)
