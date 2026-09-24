@@ -354,3 +354,15 @@ libraries/ = SubResource("AnimationLibrary_x4dg1")
 
 [node name="FlashlightToggle" type="AudioStreamPlayer2D" parent="." unique_id=1903911126]
 stream = ExtResource("25_qk6h6")
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1705842460]
+offset_left = -608.0
+offset_top = -320.0
+offset_right = -512.0
+offset_bottom = -299.0
+
+[node name="ManaBar" type="ProgressBar" parent="." unique_id=608756795]
+offset_left = -608.0
+offset_top = -288.0
+offset_right = -512.0
+offset_bottom = -267.0
