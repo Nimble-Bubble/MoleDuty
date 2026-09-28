@@ -50,7 +50,8 @@ offset_top = 31.0
 offset_right = -480.0
 offset_bottom = 68.0
 text = "At first, the audience will consist of constructs.
-At some point in the campaign, they might change to regular Huinem and Toures."
+At some point in the campaign, they might change to regular Huinem and Toures.
+Maybe we can throw some cameos in the audience?"
 
 [node name="Label4" type="Label" parent="." unique_id=396115871]
 offset_left = -2183.2878
