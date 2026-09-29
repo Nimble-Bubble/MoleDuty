@@ -6295,7 +6295,7 @@ offset_top = 559.0
 offset_right = 645.0
 offset_bottom = 599.0
 action_mode = 0
-text = "MS_test1"
+text = "Freeplay"
 icon = ExtResource("2_5q2nx")
 script = ExtResource("3_3gx5h")
 
