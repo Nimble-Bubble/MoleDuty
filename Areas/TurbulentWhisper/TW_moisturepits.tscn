@@ -47,3 +47,14 @@ text = "This map is meant to be a bit of a water area.
 There are a lot of little spots of water, hence the name \"Moisture Pits\".
 Since there probably won't be a lot of water in Brill Comb,
 This may serve as an introduction of sorts to water mechanics."
+
+[node name="Label2" type="Label" parent="." unique_id=929610942]
+offset_left = 1953.0
+offset_top = 1551.0
+offset_right = 2251.0
+offset_bottom = 1648.0
+text = "There's a fisher here. 
+They'll ask you about fishing.
+If you say that you don't know much about fishing
+or that you haven't done much fishing,
+they'll give you some info on the mechanic."
