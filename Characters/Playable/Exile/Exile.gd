@@ -3,6 +3,10 @@ extends CharacterBody2D
 class_name Exile
 
 @onready var rid = get_rid()
+@export var maxHealth = 120;
+@export var currentHealth = 120;
+@export var maxMana = 120;
+@export var currentMana = 120;
 @export var defaultSpeed = 20 * (10 / 8);
 @export var defaultAcceleration = 10;
 #Can be modified for areas set in space or underwater
@@ -28,11 +32,16 @@ static var inLiquid = 0;
 func _init():
 	velocity.x = enterVelocityX;
 	velocity.y = enterVelocityY;
+	currentHealth = maxHealth;
 	dashTimer = 0;
 	#canDash = 0;
 func _physics_process(delta):
 	var _vel = Vector2()
 	var direction = Input.get_axis("p1left", "p1right")
+	$HealthBar.max_value = maxHealth;
+	$HealthBar.value = currentHealth;
+	$ManaBar.max_value = maxMana;
+	$ManaBar.value = currentMana;
 	#This sets up the velocity text.
 	$VelXLabel.text = str(velocity.x)
 	$VelYLabel.text = str(velocity.y)
@@ -215,6 +224,11 @@ func _physics_process(delta):
 	frame_selector();
 	#frame_selector2 runs after frame_selector, so it's kind of a priority thing
 	frame_selector2();
+func damage_player(howMuchDamage):
+	currentHealth -= howMuchDamage;
+	$Painsound.play();
+	if currentHealth < 0:
+		get_tree().reload_current_scene();
 func frame_selector():
 	#Given the existence of that whole Animator thing, I'm not sure this is normal.
 	#This is kind of how I did it for that Terraria mod
