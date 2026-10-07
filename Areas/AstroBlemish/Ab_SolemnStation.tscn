@@ -38,7 +38,7 @@ the backgrounds of this station."
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=2053815081]
 z_index = -8
-color = Color(0.3490411, 0.6063815, 0.89839983, 1)
+color = Color(0, 0.8070774, 0.8922455, 1)
 polygon = PackedVector2Array(-752, -64, -752, 16, -496, 16, -800, 320, -1088, 320, -1088, 224, -1856, 224, -1856, 320, -1976, 320, -1976, 400, -640, 400, -256, 16, 384, 16, 384, -64)
 
 [node name="Polygon2D2" type="Polygon2D" parent="." unique_id=1317146723]
