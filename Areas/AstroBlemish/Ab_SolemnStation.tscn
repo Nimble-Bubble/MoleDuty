@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="1_opyil"]
 [ext_resource type="TileSet" uid="uid://bbeb2drxaemiu" path="res://Terrain/Tilesets/TestTileset2.tres" id="2_gyac0"]
 
-[node name="AbSolemnStation" type="Node2D" unique_id=1972020793]
+[node name="AB_SolemnStation" type="Node2D" unique_id=1972020793]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1874321814]
 z_index = -10
