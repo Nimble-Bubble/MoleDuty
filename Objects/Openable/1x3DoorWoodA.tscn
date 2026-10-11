@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://gxvocy78xhtb"]
+
+[ext_resource type="Texture2D" uid="uid://de5q631uxhy6b" path="res://Objects/Openable/1x3DoorWoodA.png" id="1_i2nqc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxca2"]
+atlas = ExtResource("1_i2nqc")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2nqc"]
+atlas = ExtResource("1_i2nqc")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thd8g"]
+atlas = ExtResource("1_i2nqc")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxca2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2nqc")
+}],
+"loop": 1,
+"name": &"openleft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thd8g")
+}],
+"loop": 1,
+"name": &"openright",
+"speed": 5.0
+}]
+
+[node name="1x3DoorWoodA" type="Node2D" unique_id=1665699463]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1336653999]
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+
+[node name="AreaR" type="Area2D" parent="." unique_id=2024076825]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaR" unique_id=1048530814]
+polygon = PackedVector2Array(5, -24, 32, -24, 32, 24, 5, 24)
+
+[node name="AreaL" type="Area2D" parent="." unique_id=2055637302]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AreaL" unique_id=914964733]
+polygon = PackedVector2Array(-5, -24, -5, 24, -32, 24, -32, -24)
+
+[node name="DoorSolid" type="StaticBody2D" parent="." unique_id=1514294827]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DoorSolid" unique_id=797280431]
+polygon = PackedVector2Array(-2, -24, 2, -24, 2, 24, -2, 24)

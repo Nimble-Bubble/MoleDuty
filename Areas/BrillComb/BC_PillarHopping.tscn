@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://bbeb2drxaemiu" path="res://Terrain/Tilesets/TestTileset2.tres" id="1_myp7b"]
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="2_6my03"]
+[ext_resource type="PackedScene" uid="uid://gxvocy78xhtb" path="res://Objects/Openable/1x3DoorWoodA.tscn" id="3_6my03"]
 
 [node name="BC_PillarHopping" type="Node2D" unique_id=747093757]
 
@@ -75,3 +76,9 @@ self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
 tile_map_data = PackedByteArray("AADHAAkAAQAEAAYAAADHAAoAAQAEAAcAAADMAAkAAQAFAAYAAADMAAoAAQAFAAcAAADKAAgAAQAGAAYAAADLAAgAAQAHAAYAAADIAAgAAQACAAYAAADJAAgAAQADAAYAAADHAAsAAQAEAAIAAADMAAsAAQAEAAIAAADIAAkAAQAEAAIAAADIAAoAAQAEAAIAAADIAAsAAQAEAAIAAADJAAkAAQAEAAIAAADJAAoAAQAEAAIAAADJAAsAAQAEAAIAAADKAAkAAQAEAAIAAADKAAoAAQAEAAIAAADKAAsAAQAEAAIAAADLAAkAAQAEAAIAAADLAAoAAQAEAAIAAADLAAsAAQAEAAIAAAA=")
 tile_set = ExtResource("1_myp7b")
 collision_enabled = false
+
+[node name="1x3DoorWoodA" parent="." unique_id=1665699463 instance=ExtResource("3_6my03")]
+position = Vector2(1448, -136)
+
+[node name="1x3DoorWoodA2" parent="." unique_id=1067416448 instance=ExtResource("3_6my03")]
+position = Vector2(1832, -136)
