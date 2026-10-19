@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://1l4qioafkrl3" path="res://Terrain/Tilesets/TurbulentWhisperTileset.tres" id="1_tgn1b"]
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="2_2l5ns"]
 [ext_resource type="PackedScene" uid="uid://bf2hm1m2av5of" path="res://Objects/Dynamic/1x1TorchWoodA.tscn" id="3_yox7l"]
+[ext_resource type="Texture2D" uid="uid://c7m30v77kgs87" path="res://Assets/Lights/DarkFade.png" id="4_g82mt"]
 
 [node name="DH_PillarRun" type="Node2D" unique_id=1162544482]
 
@@ -61,6 +62,18 @@ offset_right = 2122.1777
 offset_bottom = 58.11383
 text = "Maybe we can put some bridges between some of the pillars?"
 
-[node name="TileMapLayer3" type="TileMapLayer" parent="." unique_id=1909119357]
+[node name="Clip?" type="TileMapLayer" parent="." unique_id=1909119357]
+visible = false
+modulate = Color(1, 1, 1, 0.4509804)
 tile_map_data = PackedByteArray("AACAAAsA0AcFAAQAAACBAAwA0AcFAAQAAACCAA0A0AcCAAQAAACDAA0A0AcDAAQAAACEAA4A0AcCAAQAAACFAA4A0AcDAAQAAACGAA8A0AcCAAQAAACHAA8A0AcDAAQAAACIABAA0AcBAAYAAACJABAA0AcBAAYAAACKABAA0AcBAAYAAACLABAA0AcBAAYAAACMABAA0AcBAAYAAACNABAA0AcBAAYAAACOABAA0AcBAAYAAACPABAA0AcBAAYAAACQABAA0AcBAAYAAACRABAA0AcBAAYAAACSABAA0AcBAAYAAACTABAA0AcBAAYAAACUABAA0AcBAAYAAACVABAA0AcBAAYAAACWABAA0AcBAAYAAACXABAA0AcBAAYAAACYAA8A0AcAAAQAAACZAA8A0AcBAAQAAACaAA4A0AcAAAQAAACbAA4A0AcBAAQAAACcAA0A0AcAAAQAAACdAA0A0AcBAAQAAACeAAwA0AcEAAQAAACfAAsA0AcEAAQAAAA=")
 tile_set = ExtResource("1_tgn1b")
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="." unique_id=1791019533]
+tile_map_data = PackedByteArray("AACAAAsA0AcCAAoAAACBAAwA0AcCAAoAAACCAA0A0AcCAAoAAACEAA4A0AcCAAoAAACGAA8A0AcCAAoAAACZAA8A0AcAAAoAAACbAA4A0AcAAAoAAACdAA0A0AcAAAoAAACeAAwA0AcAAAoAAACfAAsA0AcAAAoAAACDAA4A0AcBAAoAAACFAA8A0AcBAAoAAACHABAA0AcBAAoAAACIABAA0AcBAAoAAACJABAA0AcBAAoAAACKABAA0AcBAAoAAACLABAA0AcBAAoAAACMABAA0AcBAAoAAACNABAA0AcBAAoAAACOABAA0AcBAAoAAACPABAA0AcBAAoAAACQABAA0AcBAAoAAACRABAA0AcBAAoAAACSABAA0AcBAAoAAACTABAA0AcBAAoAAACUABAA0AcBAAoAAACVABAA0AcBAAoAAACWABAA0AcBAAoAAACXABAA0AcBAAoAAACYABAA0AcBAAoAAACaAA8A0AcBAAoAAACcAA4A0AcBAAoAAAA=")
+tile_set = ExtResource("1_tgn1b")
+
+[node name="DarkFade" type="Sprite2D" parent="." unique_id=1060105124]
+position = Vector2(7104, 592)
+rotation = 4.712389
+scale = Vector2(0.99999976, 64.00007)
+texture = ExtResource("4_g82mt")
