@@ -118,3 +118,17 @@ offset_right = -128.00006
 offset_bottom = 176.96664
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="DarkFade4" type="Sprite2D" parent="." unique_id=276087907]
+z_index = 1
+position = Vector2(-810.035, -1533.9651)
+rotation = 0.7853982
+scale = Vector2(1, 20)
+texture = ExtResource("3_vghpl")
+
+[node name="ColorRect" type="ColorRect" parent="DarkFade4" unique_id=1230980046]
+offset_left = -1614.0952
+offset_top = -130.03491
+offset_right = -125.96509
+offset_bottom = 125.96509
+color = Color(0, 0, 0, 1)
