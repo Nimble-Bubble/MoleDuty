@@ -5,8 +5,10 @@ class_name Exile
 @onready var rid = get_rid()
 @export var maxHealth = 120;
 @export var currentHealth = 120;
+@export var regenHealth = (60 / 100);
 @export var maxMana = 120;
 @export var currentMana = 120;
+@export var regenMana = 0.01;
 @export var defaultSpeed = 20 * (10 / 8);
 @export var defaultAcceleration = 10;
 #Can be modified for areas set in space or underwater
@@ -50,6 +52,7 @@ func _physics_process(delta):
 	$VelYLabel.text = str(velocity.y);
 	$DashLabel.text = str(dashTimer);
 	#floor_stop_on_slope = false;
+	#region Toggles
 	#These are mostly debug commands to check if abilities are working.
 	#They could also be considered cheats of sorts.
 	if Input.is_action_just_pressed("togglevelocitylabel"):
@@ -106,6 +109,8 @@ func _physics_process(delta):
 		if $ExiLight.visible == true:
 			hasLight = 0;
 		$FlashlightToggle.play();
+	#endregion
+	#region Movement
 	#This is where the movement code begins.
 	if Input.is_action_pressed("p1left"):
 		if Input.is_action_pressed("p1down") and canSlide and is_on_floor():
@@ -220,6 +225,13 @@ func _physics_process(delta):
 			jumpsLeft = 2 + bonusJumps;
 		else:
 			jumpsLeft = 1 + bonusJumps;
+	#endregion
+	#region Health and Mana
+	if currentHealth < maxHealth:
+		currentHealth += regenHealth;
+	if currentMana < maxMana:
+		currentMana += maxMana;
+	#endregion
 	#motion = move_and_collide(motion)
 	frame_selector();
 	#frame_selector2 runs after frame_selector, so it's kind of a priority thing
