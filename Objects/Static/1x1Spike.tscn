@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://docqu37u5srka"]
+
+[ext_resource type="Script" uid="uid://cpgyqjbhrr7sd" path="res://Objects/Static/1x1Spike.gd" id="1_ov1hq"]
+[ext_resource type="Texture2D" uid="uid://l7131312vn11" path="res://Objects/Static/1x1Spike.png" id="1_q6bfm"]
+
+[node name="1x1Spike" type="Node2D" unique_id=541500877]
+script = ExtResource("1_ov1hq")
+
+[node name="1x1Spike" type="Sprite2D" parent="." unique_id=638855287]
+position = Vector2(256, 448)
+texture = ExtResource("1_q6bfm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1142266543]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=555547147]
+polygon = PackedVector2Array(248, 456, 256, 440, 264, 456)
