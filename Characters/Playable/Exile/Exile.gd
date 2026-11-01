@@ -30,6 +30,8 @@ class_name Exile
 @export var enterVelocityX = 0;
 @export var enterVelocityY = 0;
 static var inLiquid = 0;
+var isImmune = 0; 
+var immuneTime = 0;
 
 func _init():
 	velocity.x = enterVelocityX;
@@ -231,14 +233,22 @@ func _physics_process(delta):
 		currentHealth += regenHealth;
 	if currentMana < maxMana:
 		currentMana += maxMana;
+	
+	if (immuneTime > 0):
+		isImmune = 1;
+		immuneTime -= 1;
+	else: 
+		isImmune = 0;
 	#endregion
 	#motion = move_and_collide(motion)
 	frame_selector();
 	#frame_selector2 runs after frame_selector, so it's kind of a priority thing
 	frame_selector2();
-func damage_player(howMuchDamage):
-	currentHealth -= howMuchDamage;
-	$Painsound.play();
+func damage_player(howMuchDamage, howMuchImmunity):
+	if (isImmune == 0):
+		currentHealth -= howMuchDamage;
+		immuneTime += howMuchImmunity;
+		$Painsound.play();
 	if currentHealth < 0:
 		get_tree().reload_current_scene();
 func frame_selector():
