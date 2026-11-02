@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://gxvocy78xhtb"]
 
 [ext_resource type="Texture2D" uid="uid://de5q631uxhy6b" path="res://Objects/Openable/1x3DoorWoodA.png" id="1_i2nqc"]
+[ext_resource type="Script" uid="uid://cuvguejcdbo5h" path="res://Objects/Openable/OneByThreeDoor.gd" id="1_pxca2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pxca2"]
 atlas = ExtResource("1_i2nqc")
@@ -42,8 +43,9 @@ animations = [{
 }]
 
 [node name="1x3DoorWoodA" type="Node2D" unique_id=1665699463]
+script = ExtResource("1_pxca2")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1336653999]
+[node name="DoorSprite" type="AnimatedSprite2D" parent="." unique_id=1336653999]
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 
 [node name="AreaR" type="Area2D" parent="." unique_id=2024076825]
@@ -58,5 +60,5 @@ polygon = PackedVector2Array(-5, -24, -5, 24, -32, 24, -32, -24)
 
 [node name="DoorSolid" type="StaticBody2D" parent="." unique_id=1514294827]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DoorSolid" unique_id=797280431]
+[node name="DoorColPoly" type="CollisionPolygon2D" parent="DoorSolid" unique_id=797280431]
 polygon = PackedVector2Array(-2, -24, 2, -24, 2, 24, -2, 24)
