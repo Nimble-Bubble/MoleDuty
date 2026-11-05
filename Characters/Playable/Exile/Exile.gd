@@ -34,18 +34,36 @@ var isImmune = 0;
 var immuneTime = 0;
 
 func _init():
-	velocity.x = enterVelocityX;
-	velocity.y = enterVelocityY;
 	currentHealth = maxHealth;
 	dashTimer = 0;
 	#canDash = 0;
+func _ready():
+	fadeIn();
+	velocity.x = enterVelocityX;
+	velocity.y = enterVelocityY;
+func fadeIn():
+	var tweenIn = get_tree().create_tween();
+	tweenIn.tween_property($CanvasLayer/SceneFade, "self_modulate:a", 0, 1.0);
+	tweenIn.play();
+	await tweenIn.finished;
+	tweenIn.kill();
+
+func fadeOut():
+	var tweenOut = get_tree().create_tween()
+	tweenOut.tween_property($CanvasLayer/SceneFade, "self_modulate:a", 1, 1.0);
+	tweenOut.play();
+	await tweenOut.finished;
+	tweenOut.kill();
+	
 func _physics_process(delta):
+	#if ($CanvasLayer/SceneFade.self_modulate.a < 1 && currentHealth > 0):
+		#$CanvasLayer/SceneFade.self_modulate.a += 0.02;
 	var _vel = Vector2()
 	var direction = Input.get_axis("p1left", "p1right")
-	$HealthBar.max_value = maxHealth;
-	$HealthBar.value = currentHealth;
-	$ManaBar.max_value = maxMana;
-	$ManaBar.value = currentMana;
+	$CanvasLayer/HealthBar.max_value = maxHealth;
+	$CanvasLayer/HealthBar.value = currentHealth;
+	$CanvasLayer/ManaBar.max_value = maxMana;
+	$CanvasLayer/ManaBar.value = currentMana;
 	#This sets up the velocity text.
 	$VelXLabel.text = str(velocity.x)
 	$VelYLabel.text = str(velocity.y)
