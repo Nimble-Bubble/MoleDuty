@@ -25,6 +25,7 @@
 [ext_resource type="AudioStream" uid="uid://6pf0j2jy831s" path="res://Sounds/Player/synthyzoomin.wav" id="18_sjvte"]
 [ext_resource type="AudioStream" uid="uid://d4etxpqyppx4n" path="res://Sounds/Player/synthyzoomout.wav" id="19_o0tw0"]
 [ext_resource type="AudioStream" uid="uid://dt3hmpi5tw5q7" path="res://Sounds/Player/synthyflashlight.wav" id="25_qk6h6"]
+[ext_resource type="Shader" uid="uid://6rdowk2bfnvs" path="res://Characters/Playable/static.gdshader" id="26_8upeh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_83s8r"]
 size = Vector2(14, 30)
@@ -237,6 +238,9 @@ _data = {
 &"walk": SubResource("Animation_hglhb")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qk6h6"]
+shader = ExtResource("26_8upeh")
+
 [node name="Exile" type="CharacterBody2D" unique_id=1270810480 groups=["Player"]]
 collision_layer = 3
 floor_max_angle = 1.2217305
@@ -376,6 +380,7 @@ offset_right = -384.0
 offset_bottom = -275.0
 
 [node name="SceneFade" type="ColorRect" parent="CanvasLayer" unique_id=1847519289]
+material = SubResource("ShaderMaterial_qk6h6")
 offset_left = -640.0
 offset_top = -360.0
 offset_right = 640.0
