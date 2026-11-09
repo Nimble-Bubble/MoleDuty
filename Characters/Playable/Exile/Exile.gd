@@ -38,6 +38,9 @@ func _init():
 	dashTimer = 0;
 	#canDash = 0;
 func _ready():
+	$CanvasLayer/SceneFade.visible = true;
+	$CanvasLayer/HealthBar.visible = true;
+	$CanvasLayer/ManaBar.visible = true;
 	fadeIn();
 	velocity.x = enterVelocityX;
 	velocity.y = enterVelocityY;
@@ -46,6 +49,7 @@ func fadeIn():
 	tweenIn.tween_property($CanvasLayer/SceneFade, "self_modulate:a", 0, 1.0);
 	tweenIn.play();
 	await tweenIn.finished;
+	$CanvasLayer/SceneFade.visible = false;
 	tweenIn.kill();
 
 func fadeOut():

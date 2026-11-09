@@ -364,6 +364,7 @@ offset = Vector2(640, 360)
 transform = Transform2D(1, 0, 0, 1, 640, 360)
 
 [node name="HealthBar" type="ProgressBar" parent="CanvasLayer" unique_id=1705842460]
+visible = false
 modulate = Color(0.7997719, 0.29641584, 0.46831298, 1)
 z_index = 10
 offset_left = -608.0
@@ -372,6 +373,7 @@ offset_right = -384.0
 offset_bottom = -307.0
 
 [node name="ManaBar" type="ProgressBar" parent="CanvasLayer" unique_id=608756795]
+visible = false
 modulate = Color(0.35134056, 0.48651385, 0.93915457, 1)
 z_index = 10
 offset_left = -608.0
@@ -380,6 +382,7 @@ offset_right = -384.0
 offset_bottom = -275.0
 
 [node name="SceneFade" type="ColorRect" parent="CanvasLayer" unique_id=1847519289]
+visible = false
 material = SubResource("ShaderMaterial_qk6h6")
 offset_left = -640.0
 offset_top = -360.0
