@@ -82,3 +82,10 @@ shape = SubResource("RectangleShape2D_g4v7s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=550558144]
 position = Vector2(-376, 12)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=2069193453]
+offset_left = -1008.0
+offset_top = 1648.0
+offset_right = 6080.0
+offset_bottom = 2720.0
+color = Color(0, 0, 0, 1)
