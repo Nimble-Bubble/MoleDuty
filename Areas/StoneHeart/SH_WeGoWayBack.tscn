@@ -15,7 +15,8 @@ offset_left = 1061.0001
 offset_top = 2025.9999
 offset_right = 1370.0001
 offset_bottom = 2042.9999
-text = "Had a somewhat specific shape in mind for this scene."
+text = "Had a somewhat specific shape in mind for this scene.
+This is above a watery area, so there's some water near the bottom of this place."
 
 [node name="Exile" parent="." unique_id=1270810480 instance=ExtResource("2_r1lwc")]
 position = Vector2(181, -1868)
