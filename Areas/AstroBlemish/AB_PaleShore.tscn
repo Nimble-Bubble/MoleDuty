@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://1l4qioafkrl3" path="res://Terrain/Tilesets/TurbulentWhisperTileset.tres" id="1_jr2ct"]
 [ext_resource type="PackedScene" uid="uid://dqvv36meum2rq" path="res://Characters/Playable/Exile/Exile.tscn" id="2_cgdmf"]
+[ext_resource type="Texture2D" uid="uid://c7m30v77kgs87" path="res://Assets/Lights/DarkFade.png" id="3_bja27"]
 
 [node name="AB_PaleShore" type="Node2D" unique_id=1849802974]
 
@@ -23,3 +24,16 @@ offset_top = -306.27374
 offset_right = 7215.8965
 offset_bottom = -289.27374
 text = "There's supposed to be some big debris here."
+
+[node name="DarkFade" type="Sprite2D" parent="." unique_id=1227455824]
+position = Vector2(768, 112.00012)
+scale = Vector2(1, 11.875)
+texture = ExtResource("3_bja27")
+
+[node name="Label2" type="Label" parent="." unique_id=56592789]
+offset_left = 1073.0
+offset_top = -120.0
+offset_right = 1367.0
+offset_bottom = 6.0
+text = "You can head over to the west sea area this way.
+Sea Tower can be found near the docks."
