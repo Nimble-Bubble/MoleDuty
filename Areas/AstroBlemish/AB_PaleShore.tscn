@@ -26,8 +26,8 @@ offset_bottom = -289.27374
 text = "There's supposed to be some big debris here."
 
 [node name="DarkFade" type="Sprite2D" parent="." unique_id=1227455824]
-position = Vector2(768, 112.00012)
-scale = Vector2(1, 11.875)
+position = Vector2(1152, 112.00001)
+scale = Vector2(4, 11.875)
 texture = ExtResource("3_bja27")
 
 [node name="Label2" type="Label" parent="." unique_id=56592789]
@@ -35,5 +35,18 @@ offset_left = 1073.0
 offset_top = -120.0
 offset_right = 1367.0
 offset_bottom = 6.0
-text = "You can head over to the west sea area this way.
+text = "You can head over to the west sea area (Floatsam Sea) this way.
 Sea Tower can be found near the docks."
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=556961734]
+offset_left = -448.0
+offset_top = -1408.0
+offset_right = 640.0
+offset_bottom = 1632.0
+color = Color(0, 0, 0, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=968635164]
+position = Vector2(560, 1344)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1822896536]
+polygon = PackedVector2Array(0, 16, -880, 16, -880, 0, 0, 0)
