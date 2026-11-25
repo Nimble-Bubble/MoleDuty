@@ -64,10 +64,10 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-640, 416, -256, 32, -192, 32, -192, 416)
 
 [node name="Label2" type="Label" parent="." unique_id=741516167]
-offset_left = -1632.0
-offset_top = 320.0
-offset_right = -1592.0
-offset_bottom = 337.0
+offset_left = -1561.0
+offset_top = 310.0
+offset_right = -1368.0
+offset_bottom = 327.0
 text = "This is where the train comes in."
 
 [node name="Label3" type="Label" parent="Label2" unique_id=814061437]

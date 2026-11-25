@@ -13,6 +13,11 @@ tile_set = ExtResource("1_014lj")
 
 [node name="CharacterBody2D" parent="." unique_id=1270810480 instance=ExtResource("2_5jd5m")]
 position = Vector2(0, -19)
+canDash = 1
+canClimb = 1
+canSlide = 1
+canSlam = 1
+canAirJump = 1
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=316455830]
 z_index = -5
